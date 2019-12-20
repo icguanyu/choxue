@@ -1,0 +1,27 @@
+#top-region-wrapper {
+  position: relative; }
+  #top-region-wrapper .detail-statistic {
+    padding-top: .5rem;
+    padding-bottom: .5rem; }
+    @media (min-width: 992px) {
+      #top-region-wrapper .detail-statistic {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 100px;
+        padding-left: 15px;
+        position: absolute;
+        bottom: -3rem;
+        right: 0; } }
+
+.bg-midgrey {
+  background-color: #e3e3e3; }
+
+.nav-pills .nav-link {
+  color: #9d9d9d;
+  background-color: white;
+  border-radius: 0;
+  border-bottom: 5px solid #d3d3d3; }
+  .nav-pills .nav-link.active {
+    color: #e94f1b;
+    background-color: white;
+    border-color: #e94f1b; }
