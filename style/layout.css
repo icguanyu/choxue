@@ -9,6 +9,7 @@
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 a,
@@ -105,7 +106,7 @@ header {
           transform: translateY(-50%);
   display: block;
   width: 100%;
-  height: 1px;
+  height: 1.5px;
   background: white;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -114,7 +115,7 @@ header {
 .menu .hamburger span:after, .menu .hamburger span:before {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 1.5px;
   background: white;
   position: absolute;
   left: 0;
@@ -137,7 +138,6 @@ header {
 }
 
 .menu .hamburger.active span:after, .menu .hamburger.active span:before {
-  height: 1px;
   top: 0;
 }
 
@@ -173,12 +173,12 @@ header {
   position: absolute;
   top: 0;
   right: -100%;
-  max-width: 60%;
+  max-width: 70%;
   height: 100vh;
   padding: 60px 0;
   background: black;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .mobile_menu nav .logo {
