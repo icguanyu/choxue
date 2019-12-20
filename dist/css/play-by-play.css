@@ -1,0 +1,86 @@
+.filter-btn {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 20px;
+  height: 32px;
+  padding: 0px 10px 0px 10px; }
+  .filter-btn:not(.filter-advanced) {
+    color: #e94f1b;
+    border-color: #e94f1b; }
+  .filter-btn.filter-advanced {
+    color: black; }
+  .filter-btn.square {
+    border-radius: 50%;
+    width: 32px;
+    padding: 0; }
+  .filter-btn.active {
+    color: white;
+    background-color: #e94f1b;
+    border: none; }
+
+.filter-btn-lg {
+  height: 40px; }
+  .filter-btn-lg.square {
+    width: 40px; }
+
+.filter-advance-container {
+  margin-bottom: 2rem; }
+  .filter-advance-container .filter-row {
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1rem; }
+    .filter-advance-container .filter-row > [class*="col-"] {
+      padding-right: 2px;
+      padding-left: 2px; }
+    .filter-advance-container .filter-row .col-title {
+      flex: 0 0 13%;
+      max-width: 13%; }
+    .filter-advance-container .filter-row .col-last {
+      flex: 0 0 8%;
+      max-width: 8%; }
+  .filter-advance-container #filter-advance-clear-btn {
+    padding-left: 0; }
+    .filter-advance-container #filter-advance-clear-btn > * {
+      vertical-align: middle; }
+
+.play-by-play-score {
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly; }
+  @media (max-width: 992px) {
+    .play-by-play-score {
+      font-size: 1.5rem;
+      margin-bottom: 0; } }
+
+.play-by-play-table .row {
+  text-align: center;
+  align-items: center; }
+
+.play-by-play-table .play-by-play-row {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
+  .play-by-play-table .play-by-play-row.title {
+    font-size: 1.25rem;
+    background-color: #e94f1b;
+    color: white;
+    font-weight: bold; }
+  .play-by-play-table .play-by-play-row.event {
+    font-size: 1rem;
+    background-color: white;
+    font-weight: 500;
+    border-bottom: 1px solid #f3f3f3; }
+    .play-by-play-table .play-by-play-row.event:last-child {
+      border-bottom: none; }
+  .play-by-play-table .play-by-play-row .event-content {
+    font-size: 0.75rem; }
+
+.play-by-play-more {
+  opacity: 0; }
+
+.play-by-play-table:hover .play-by-play-more {
+  opacity: 1;
+  animation: opacity 1 0.5s; }

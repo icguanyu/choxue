@@ -1,0 +1,351 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../lib/css/bootstrap-4.1.0.min.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-extension.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/kendo.bootstrap-v4.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/css/kendo.mobile.all.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/css/kendo.custom.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script type="text/javascript" src="../lib/js/jquery-3.3.1.js"></script>
+    <!--DRopdown need this js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="../lib/js/bootstrap-4.1.0.min.js"></script>
+    <script type="text/javascript" src="../lib/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../lib/js/kendo.timezones.min.js"></script>
+    <script type="text/javascript" src="../lib/js/kendo.mobile.min.js"></script>
+
+    <style>
+        /** dropdown css*/
+        .btn-secondary {
+            border: unset;
+        }
+        
+        .dropdown-toggle {
+            background-color: #E94F1B;
+        }
+
+        .dropdown-toggle:hover,
+        .show>.btn-secondary.dropdown-toggle,
+        .show > .btn-secondary.dropdown-toggle:focus {
+            background-color: #E94F1B;
+            border: unset;
+            box-shadow: unset;
+        }
+
+        .show>.btn-secondary.dropdown-toggle::after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: .255em;
+            vertical-align: .255em;
+            content: "";
+            border-top: 0;
+            border-right: .3em solid transparent;
+            border-bottom: .3em solid;
+            border-left: .3em solid transparent;
+        }
+
+        .dropdown-menu {
+            background-color: #404040;
+            border-radius: unset;
+        }
+
+        .dropdown-header {
+            color: #E94F1B;
+        }
+
+        .dropdown-item {
+            color: #fff;
+        }
+
+        .dropdown-item:hover {
+            background-color: #404040;
+            border-left: 5px #E94F1B solid;
+            color: #FFF;
+        }
+
+        /* Grid CSS*/
+        .k-grid-header,
+        .k-grid-header-wrap th {
+            background: #000000 !important;
+            text-align: left;
+        }
+
+        .k-grid-content tr {
+            background: #FAFAFA;
+        }
+
+        .k-grid-content td {
+            border: unset;
+        }
+
+        /* Scheduler CSS*/
+        .k-scheduler-navigation .k-nav-prev,
+        .k-scheduler-navigation .k-nav-next,
+        .k-scheduler-navigation li,
+        .k-scheduler-footer li,
+        .k-scheduler-navigation .k-nav-today {
+            border-color: #E94F1B;
+            background-color: #E94F1B;
+        }
+
+        thead tr {
+            color: #000000 !important;
+        }
+
+        th a {
+            color: #FFFFFF !important;
+        }
+
+        .k-widget {
+            border: unset;
+        }
+
+        .k-scheduler-toolbar {
+            border-color: #9D9D9D !important;
+        }
+
+        .k-nav-prev {
+            order: 1;
+        }
+
+        .k-nav-today {
+            order: 2;
+        }
+
+        .k-nav-next {
+            order: 3;
+        }
+
+        .k-nav-current {
+            margin-left: auto !important;
+            order: 4;
+        }
+
+        .k-scheduler-refresh {
+            display: none;
+        }
+
+        .k-scheduler-content {
+            border: unset;
+        }
+
+        .k-scheduler-header .k-scheduler-table tbody tr {
+            background-color: #404040 !important;
+            color: #FFF;
+        }
+
+        .k-scheduler-content .k-scheduler-table tr th {
+            border: 0.1px solid #9D9D9D !important;
+        }
+
+        .k-scheduler-content .k-scheduler-table tr td {
+            border: 0.5px solid #D3D3D3 !important;
+        }
+
+        .k-scheduler-monthview .k-scheduler-table td {
+            text-align: left;
+        }
+
+        .k-scheduler-content .k-scheduler-table td {
+            background: #FAFAFA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <h6 class="dropdown-header">Dropdown header</h6>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="grid"></div>
+            </div>
+            <div class="w-100"></div>
+            <hr>
+            <div class="col">
+                <div id="scheduler"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $("#grid").kendoGrid({
+        dataSource: {
+            type: "odata",
+            transport: {
+                read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+            },
+            pageSize: 20
+        },
+        height: 550,
+        sortable: true,
+        columns: [{
+            template: "<div class='customer-photo'" +
+                "style='background-image: url(../content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                "<div class='customer-name'>#: ContactName #</div>",
+            field: "ContactName",
+            title: "Contact Name",
+            width: 240
+        }, {
+            field: "ContactTitle",
+            title: "Contact Title"
+        }, {
+            field: "CompanyName",
+            title: "Company Name"
+        }, {
+            field: "Country",
+            width: 150
+        }]
+    });
+
+
+
+    $("#scheduler").kendoScheduler({
+        date: new Date("2013/6/13"),
+        startTime: new Date("2013/6/13 07:00 AM"),
+        height: 600,
+        views: [
+            "month"
+        ],
+        dataSource: {
+            batch: true,
+            transport: {
+                read: {
+                    url: "https://demos.telerik.com/kendo-ui/service/tasks",
+                    dataType: "jsonp"
+                },
+                update: {
+                    url: "https://demos.telerik.com/kendo-ui/service/tasks/update",
+                    dataType: "jsonp"
+                },
+                create: {
+                    url: "https://demos.telerik.com/kendo-ui/service/tasks/create",
+                    dataType: "jsonp"
+                },
+                destroy: {
+                    url: "https://demos.telerik.com/kendo-ui/service/tasks/destroy",
+                    dataType: "jsonp"
+                },
+                parameterMap: function (options, operation) {
+                    if (operation !== "read" && options.models) {
+                        return {
+                            models: kendo.stringify(options.models)
+                        };
+                    }
+                }
+            },
+            schema: {
+                model: {
+                    id: "taskId",
+                    fields: {
+                        taskId: {
+                            from: "TaskID",
+                            type: "number"
+                        },
+                        title: {
+                            from: "Title",
+                            defaultValue: "No title",
+                            validation: {
+                                required: true
+                            }
+                        },
+                        start: {
+                            type: "date",
+                            from: "Start"
+                        },
+                        end: {
+                            type: "date",
+                            from: "End"
+                        },
+                        startTimezone: {
+                            from: "StartTimezone"
+                        },
+                        endTimezone: {
+                            from: "EndTimezone"
+                        },
+                        description: {
+                            from: "Description"
+                        },
+                        recurrenceId: {
+                            from: "RecurrenceID"
+                        },
+                        recurrenceRule: {
+                            from: "RecurrenceRule"
+                        },
+                        recurrenceException: {
+                            from: "RecurrenceException"
+                        },
+                        ownerId: {
+                            from: "OwnerID",
+                            defaultValue: 1
+                        },
+                        isAllDay: {
+                            type: "boolean",
+                            from: "IsAllDay"
+                        }
+                    }
+                }
+            },
+            filter: {
+                logic: "or",
+                filters: [{
+                        field: "ownerId",
+                        operator: "eq",
+                        value: 1
+                    },
+                    {
+                        field: "ownerId",
+                        operator: "eq",
+                        value: 2
+                    }
+                ]
+            }
+        },
+        resources: [{
+            field: "ownerId",
+            title: "Owner",
+            dataSource: [{
+                    text: "Alex",
+                    value: 1,
+                    color: "#f8a398"
+                },
+                {
+                    text: "Bob",
+                    value: 2,
+                    color: "#51a0ed"
+                },
+                {
+                    text: "Charlie",
+                    value: 3,
+                    color: "#56ca85"
+                }
+            ]
+        }]
+    });
+</script>
+
+</html>

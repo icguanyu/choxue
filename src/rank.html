@@ -1,0 +1,768 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Index </title>
+  <link rel="stylesheet" href="../lib/css/bootstrap-4.1.0.min.css">
+  <link rel="stylesheet" href="../dist/css/bootstrap-extension.css">
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/css/rank.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../lib/css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../lib/css/slick-theme.css" />
+  <script type="text/javascript" src="../lib/js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../lib/js/popper-1.2.9.min.js"></script>
+  <script type="text/javascript" src="../lib/js/bootstrap-4.1.0.min.js"></script>
+
+  <!-- kendo start -->
+  <link rel="stylesheet" type="text/css" href="../lib/css/kendo.bootstrap-v4.css" />
+  <link rel="stylesheet" type="text/css" href="../lib/css/kendo.mobile.all.css" />
+  <link rel="stylesheet" type="text/css" href="../lib/css/kendo.custom.css" />
+  <link rel="stylesheet" href="../dist/css/kendo.css">
+
+  <script type="text/javascript" src="../lib/js/kendo.all.min.js"></script>
+  <script type="text/javascript" src="../lib/js/kendo.timezones.min.js"></script>
+  <script type="text/javascript" src="../lib/js/kendo.mobile.min.js"></script>
+  <!-- kendo end -->
+</head>
+
+<body>
+  <header id="nav-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black px-5 fixed-top">
+      <a class="navbar-brand font-weight-bold" href="index.html">
+        <img class="img-fluid" src="../img/logo/1x.png" srcset="../img/logo/1x.png 1x, ../img/logo/2x.png 2x" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="top-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="top-nav">
+        <ul class="navbar-nav ml-auto mr-5">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="schedule.html">賽程</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="rank.html">排行</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="team.html">隊伍</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="coach.html">教練</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="player.html">球員</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="statistic.html">數據</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="about.html">關於</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li class="">
+            <a class="nav-link d-inline px-0" href="#"><i class="fab fa-youtube nav-icon"></i></a>
+            <!-- </li> -->
+            <!-- <li class="nav-icon"> -->
+            <a class="nav-link d-inline px-0" href="#"><i class="fab fa-instagram nav-icon"></i></a>
+            <!-- </li> -->
+            <!-- <li class="nav-icon"> -->
+            <a class="nav-link d-inline px-0" href="#"><i class="fab fa-facebook-f nav-icon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <div id="nav-space"></div>
+
+  <div id="navigation-wrapper">
+    <div class="container">
+      <a href="" class="link-unstyled">首頁</a>
+      <span>&nbsp;/&nbsp;</span>
+      <a href="" class="link-unstyled">排行</a>
+    </div>
+  </div>
+
+  <div id="filter-wrapper" class="bg-secondary">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-6 col-lg-2 mb-2">
+          <div class="dropdown dropdown-dark">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              賽季
+            </button>
+            <div class="dropdown-menu">
+              <h6 class="dropdown-header">賽季</h6>
+              <button class="dropdown-item">季前訓練賽</button>
+              <button class="dropdown-item">季賽</button>
+              <button class="dropdown-item">區域季後賽</button>
+              <button class="dropdown-item">全國季後賽</button>
+              <button class="dropdown-item">全國季後賽八強</button>
+              <button class="dropdown-item">全國季後賽四強</button>
+              <button class="dropdown-item">冠軍賽</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 mb-2">
+          <div class="dropdown dropdown-dark">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              組別
+            </button>
+            <div class="dropdown-menu">
+              <h6 class="dropdown-header">組別</h6>
+              <button class="dropdown-item">北1區-基隆</button>
+              <button class="dropdown-item">北1區-東</button>
+              <button class="dropdown-item">北2區-東南</button>
+              <button class="dropdown-item">北2區-西南</button>
+              <button class="dropdown-item">北3區-中西</button>
+              <button class="dropdown-item">北3區-北</button>
+              <button class="dropdown-item">桃園</button>
+              <button class="dropdown-item">新竹</button>
+              <button class="dropdown-item">台中</button>
+              <button class="dropdown-item">彰化</button>
+              <button class="dropdown-item">高雄</button>
+              <button class="dropdown-item">屏東</button>
+              <button class="dropdown-item">宜蘭-溪北</button>
+              <button class="dropdown-item">宜蘭-溪南</button>
+              <button class="dropdown-item">花蓮</button>
+              <button class="dropdown-item">台東</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="custom-search">
+            <input type="text" class="form-control custom-search-input" placeholder="搜尋隊伍名" />
+            <button class="btn btn-light custom-search-btn" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="grouped-wrapper" class="bg-grey">
+    <div class="container pt-5">
+      <h4 class="text-theme">○○賽季分組排行</h4>
+      <div class="row mt-3">
+        <div class="col-12 col-lg-6 mb-2">
+          <div class="bg-theme p-2">
+            <h6 class="mb-0">北1區-基隆</h6>
+          </div>
+          <table class="table border-dark text-center table-vertical-tight th-dark">
+            <thead>
+              <th>排行</th>
+              <th>隊伍</th>
+              <th>勝</th>
+              <th>敗</th>
+              <th>勝分差</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-6 mb-2">
+          <div class="bg-theme p-2">
+            <h6 class="mb-0">北1區-基隆</h6>
+          </div>
+          <table class="table border-dark text-center table-vertical-tight th-dark">
+            <thead>
+              <th>排行</th>
+              <th>隊伍</th>
+              <th>勝</th>
+              <th>敗</th>
+              <th>勝分差</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-6 mb-2">
+          <div class="bg-theme p-2">
+            <h6 class="mb-0">北1區-基隆</h6>
+          </div>
+          <table class="table border-dark text-center table-vertical-tight th-dark">
+            <thead>
+              <th>排行</th>
+              <th>隊伍</th>
+              <th>勝</th>
+              <th>敗</th>
+              <th>勝分差</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-6 mb-2">
+          <div class="bg-theme p-2">
+            <h6 class="mb-0">北1區-基隆</h6>
+          </div>
+          <table class="table border-dark text-center table-vertical-tight th-dark">
+            <thead>
+              <th>排行</th>
+              <th>隊伍</th>
+              <th>勝</th>
+              <th>敗</th>
+              <th>勝分差</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="text-left">
+                  <img src="../img/demo/team-logo-6.png" class="team-icon">
+                  <span>&nbsp;安樂高中</span>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="ungrouped-wrapper" class="bg-grey">
+    <div class="container py-5">
+      <h4 class="text-theme">○○賽季不分組排行</h4>
+
+      <hr class="border-theme" />
+
+      <div class="d-desktop">
+        <div class="row" data-toggle="buttons">
+          <div class="col">
+          </div>
+          <div class="col-auto text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme active">
+                <input type="radio" name="statistic-toggle-ungrouped" value="other" autocomplete="off">
+                其他
+              </label>
+            </div>
+          </div>
+          <div class="col-auto text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme ">
+                <input type="radio" name="statistic-toggle-ungrouped" value="detail" autocomplete="off">
+                詳細犯規
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-mobile">
+        <div class="row no-gutters" data-toggle="buttons">
+          <div class="col-5ths text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme">
+                <input type="radio" name="statistic-toggle-ungrouped" value="win-loss-points-enemyPoints-gap-er"
+                  autocomplete="off">
+                <span class="font-small line-height-3">戰績</span>
+              </label>
+            </div>
+          </div>
+          <div class="col-5ths text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme">
+                <input type="radio" name="statistic-toggle-ungrouped" value="two-three" autocomplete="off">
+                <span class="font-small">二/三<br />分球</span>
+              </label>
+            </div>
+          </div>
+          <div class="col-5ths text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme">
+                <input type="radio" name="statistic-toggle-ungrouped" value="freethrow-rebound" autocomplete="off">
+                <span class="font-small">罰球/<br />籃板</span>
+              </label>
+            </div>
+          </div>
+          <div class="col-5ths text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme active">
+                <input type="radio" name="statistic-toggle-ungrouped" value="other" autocomplete="off">
+                <span class="font-small line-height-3">其他</span>
+              </label>
+            </div>
+          </div>
+          <div class="col-5ths text-center">
+            <div class="btn-group btn-group-toggle">
+              <label class="btn btn-theme">
+                <input type="radio" name="statistic-toggle-ungrouped" value="detail" autocomplete="off">
+                <span class="font-small">詳細<br />犯規</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <div id="kendo-statistic-root"></div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container py-5">
+      <div class="row">
+
+        <div class="col-12 col-md-6">
+          <img class="img-fluid" src="../img/logo/1x.png" srcset="../img/logo/1x.png 1x, ../img/logo/2x.png 2x" />
+
+        </div>
+        <div class="col-12 col-md-6">
+          <span>Copyright © 2019 球學股份有限公司 Incorporated.</span>
+          <br />
+          <span>All rights reserved. Power by HOT籃球熱</span>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-6 col-md-auto">
+          <p class="font-weight-bold">球學聯盟</p>
+          <div class="row">
+            <div class="col-6">
+              <ul class="list-group">
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>首頁</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p style="word-break: keep-all;">最新消息</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>賽程</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>排行</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>隊伍</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-group">
+                <li class="list-inline-item">
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>教練</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>球員</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>數據</p>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" class="text-white">
+                    <p>關於</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-auto">
+          <p>CHOXUE LEAGUE</p>
+          <p>球學股份有限公司</p>
+          <p>tel-+886223613639</p>
+          <p>email-service@choxue.com</p>
+        </div>
+        <div class="col-12 col-md-auto">
+          <div class="row">
+            <div class="col-auto col-md-12">
+              <span class="font-weight-bold">關注我們</span>
+            </div>
+            <div class="col-auto col-md-12">
+
+              <i class="fab fa-youtube"></i>
+              <span>&nbsp;&nbsp;</span>
+              <i class="fab fa-instagram"></i>
+              <span>&nbsp;&nbsp;</span>
+              <i class="fab fa-facebook-f"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-auto">
+          <a href="" class="link-unstyled">
+            <span class="font-weight-bold">加入我們</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript" src="../dist/js/main.min.js"></script>
+<script type="text/javascript" src="../lib/js/slick.min.js"></script>
+<script>
+  // 數據表格 clone, toggle
+  $(function () {
+
+    for (var i = 0; i < 5; i++) {
+      var $clone = $('#ungrouped-container #clone').clone().removeAttr('id').show();
+      // $clone.find('#group-name').text(groupList[i]);
+      $('#ungrouped-container').append($clone);
+    }
+    for (var i = 0; i < 5; i++) {
+      var $clone = $('#team-statistic-wrapper #statistic-clone-container #clone').clone().removeAttr('id').show();
+      // $clone.find('#group-name').text(groupList[i]);
+      $('#team-statistic-wrapper #statistic-clone-container').append($clone);
+    }
+
+
+
+    $("#kendo-statistic-root").kendoGrid({
+      attributes: { class: "text-center" },
+      dataSource: {
+        data: initArray(5, {
+          rank: "1",
+          team: "基隆商工",
+          win: "9",
+          loss: "12",
+          points: 102,
+          enemyPoints: 242,
+          gap: 10,
+          per: 10,
+          twoFgm: 87,
+          twoFga: 156,
+          twoFgp: '55.8%',
+          threeFgm: 40,
+          threeFga: 114,
+          threeFgp: '35.1%',
+          freethrowFgm: 35,
+          freethrowFga: 51,
+          freethrowFgp: '68.6%',
+          reb: 132,
+          oreb: 35,
+          dreb: 97,
+          assist: 5,
+          steal: 9,
+          block: 8,
+          turnover: 14,
+          foul: 14,
+          foulCommon: 0,
+          foulOffensive: 0,
+          foulUsml: 0,
+          foulTechnical: 0,
+          foulDisqualifying: 0,
+          foulTotal: 0,
+        })
+      },
+      scrollable: false,
+      sortable: true,
+      columns: [
+        { title: "排行", field: "rank", attributes: { class: "bg-black" }, },
+        { title: "隊伍", field: "team", attributes: { class: "bg-black" }, },
+        { title: "勝場", field: "win", hidden: isMobile, },
+        { title: "敗場", field: "loss", hidden: isMobile, },
+        { title: "得分", field: "points", hidden: isMobile, },
+        { title: "失分", field: "enemyPoints", hidden: isMobile, },
+        { title: "分差", field: "gap", hidden: isMobile, },
+        { title: "效率", field: "per", hidden: isMobile, },
+
+        {
+          title: "二分球",
+          field: "two",
+          hidden: isMobile,
+          columns: [
+            { title: "進球", field: "twoFgm", },
+            { title: "出手", field: "twoFga", },
+            { title: "命中率", field: "twoFgp", },
+          ]
+        },
+        {
+          title: "三分球",
+          field: "three",
+          hidden: isMobile,
+          columns: [
+            { title: "進球", field: "threeFgm", },
+            { title: "出手", field: "threeFga", },
+            { title: "命中率", field: "threeFgp", },
+          ]
+        },
+        {
+          title: "罰球",
+          field: "freethrow",
+          hidden: isMobile,
+          columns: [
+            { title: "進球", field: "freethrowFgm", },
+            { title: "出手", field: "freethrowFga", },
+            { title: "命中率", field: "freethrowFgp", },
+          ]
+        },
+        {
+          title: "籃板",
+          field: "rebound",
+          hidden: isMobile,
+          columns: [
+            { title: "總籃板", field: "reb", },
+            { title: "進攻", field: "oreb", },
+            { title: "防守", field: "dreb", },
+          ]
+        },
+        {
+          title: "其他",
+          field: "other",
+          // hidden: isMobile,
+          hidden: false,
+          columns: [
+            { title: "助攻", field: "assist", },
+            { title: "抄截", field: "steal", },
+            { title: "火鍋", field: "block", },
+            { title: "失誤", field: "turnover", },
+            { title: "犯規", field: "foul", },
+          ]
+        },
+        {
+          title: "詳細犯規",
+          field: "detail",
+          hidden: true,
+          columns: [
+            { title: "一般犯規", field: "foulCommon", },
+            { title: "進攻犯規", field: "foulOffensive", },
+            { title: "違反運動道德", field: "foulUsml", },
+            { title: "技術犯規", field: "foulTechnical", },
+            { title: "奪權", field: "foulDisqualifying", },
+            { title: "總犯規", field: "foulTotal", },
+          ]
+        },
+      ]
+    });
+
+    addStatisticToggle(
+      'statistic-toggle-ungrouped',
+      $("#kendo-statistic-root"),
+      ['other', 'detail'],
+      ['two', 'three', 'freethrow', 'rebound', 'other', 'detail']
+    );
+  });
+
+</script>
+
+</html>
