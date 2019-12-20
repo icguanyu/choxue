@@ -7,7 +7,7 @@ $(function () {
 
   var h = $('#nav-wrapper nav').innerHeight()
   $('#nav-space').innerHeight(h)
-	console.log($('#nav-wrapper nav'))
+	// console.log($('#nav-wrapper nav'))
 	
 	$(document).on('click', '.dropdown-item', function() {
 		var $container = $(this).parents('.dropdown');
