@@ -16,7 +16,7 @@
   <!-- swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="style/layout.css">
-  <link rel="stylesheet" href="style/swiper.css">
+  <link rel="stylesheet" href="style/home_scss.css">
 
 </head>
 
@@ -129,237 +129,135 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
- 
-  <div id="second-carousel">
-    <div id="slick-container">
-
-      <div class="slick-item">
-        <div class="text-center">
-          <p class="caption">區域季後賽 北1區-東 2019-11-01 18:00 ＸＸ球場</p>
-          <div class="container-fluid px-5">
-            <div class="row no-gutters">
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-2.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">松山家商</b>
-              </div>
-              <div class="col-6 px-0 flex-column justify-content-center">
-                <h3>
-                  <span>43</span>
-                  <span> : </span>
-                  <span class="text-theme">52</span>
-                </h3>
-                <span class="text-secondary caption">延長賽</span>
-              </div>
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-3.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">永春高中</b>
-              </div>
+  <!-- 即時賽況 #live-game (Swiper.js)  -->
+  <div class="swiper-container" id="live-game">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="date">區域季後賽 北1區-東 2019-11-01 18:00</div>
+        <div class="player">
+          <div class="team" id="team-1">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-5.png" alt="">
+              <div class="team-name">松山家商</div>
             </div>
           </div>
-          <br />
-          <div class="bg-grey py-2">
-            <span class="caption">陳中安：得分18 | 王平一：得分18</span>
-          </div>
-
-          <div class="container-fluid">
-            <div class="row bottom-bar">
-              <div class="col-auto bg-theme py-2">
-                <span>● </span><span>LIVE</span>
-              </div>
-              <div class="">
-                <div class="straight-line">
-                </div>
-              </div>
-              <div class="col-auto py-2">
-                <span>&nbsp;</span>
-                <i class="far fa-play-circle"></i>
-                <span>&nbsp;</span>
-              </div>
-              <div class="">
-                <div class="straight-line">
-                </div>
-              </div>
-              <div class="col py-2">
-                <span class="">
-                  BOXSCORE
-                </span>
-              </div>
-              <div class="">
-                <div class="straight-line">
-                </div>
-              </div>
-              <div class="col py-2">
-                <span class="">
-                  PLAY BY PLAY
-                </span>
-              </div>
+          <div class="vs">
+            <div class="with-number">
+              <p><span>43</span>:<span class="high-light">52</span></p>
             </div>
-
+          </div>
+          <div class="team" id="team-2">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-4.png" alt="">
+              <div class="team-name">松山家商</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="msg">陳安安：得分18 | 吳平一：籃板8</div>
+          <div class="items">
+            <div class="item" id="item-live">● LIVE</div>
+            <div class="item" id="item-play"><img src="/images/svg/play.svg" alt=""></div>
+            <div class="item" id="item-boxscore">BOXSCORE</div>
+            <div class="item" id="item-playbyplay">PLAYBYPLAY</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="date">區域季後賽 北1區-東 2019-11-01 18:00</div>
+        <div class="player">
+          <div class="team" id="team-1">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-5.png" alt="">
+              <div class="team-name">松山家商</div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="with-number">
+              <p><span>43</span>:<span class="high-light">52</span></p>
+            </div>
+          </div>
+          <div class="team" id="team-2">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-4.png" alt="">
+              <div class="team-name">松山家商</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="msg">陳安安：得分18 | 吳平一：籃板8</div>
+          <div class="items">
+            <div class="item" id="item-live">● LIVE</div>
+            <div class="item" id="item-play"><img src="/images/svg/play.svg" alt=""></div>
+            <div class="item" id="item-boxscore">BOXSCORE</div>
+            <div class="item" id="item-playbyplay">PLAYBYPLAY</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="date">區域季後賽 北1區-東 2019-11-01 18:00</div>
+        <div class="player">
+          <div class="team" id="team-1">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-5.png" alt="">
+              <div class="team-name">松山家商</div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="without-number">
+              <p><span>VS</span></p>
+            </div>
+          </div>
+          <div class="team" id="team-2">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-4.png" alt="">
+              <div class="team-name">松山家商</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="items">
+            <div class="item" id="item-not-yet">未開賽</div>
           </div>
         </div>
 
       </div>
-
-      <div class="slick-item">
-        <div class="text-center">
-          <p class="caption">區域季後賽 北1區-東 2019-11-01 18:00 ＸＸ球場</p>
-          <div class="container-fluid px-5">
-            <div class="row no-gutters">
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-2.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">松山家商</b>
-              </div>
-              <div class="col-6 px-0 flex-column justify-content-center">
-                <h3>
-                  <span>43</span>
-                  <span> : </span>
-                  <span class="text-theme">52</span>
-                </h3>
-              </div>
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-3.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">永春高中</b>
-              </div>
+      <div class="swiper-slide">
+        <div class="date">區域季後賽 北1區-東 2019-11-01 18:00</div>
+        <div class="player">
+          <div class="team" id="team-1">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-5.png" alt="">
+              <div class="team-name">松山家商</div>
             </div>
           </div>
-          <br />
-          <div class="bg-grey py-2">
-            <span class="caption">陳中安：得分18 | 王平一：得分18</span>
-          </div>
-
-          <div class="container-fluid">
-            <div class="row bottom-bar">
-              <div class="col-auto bg-theme py-2">
-                <span>完賽</span>
-              </div>
-              <div class="">
-                <div class="straight-line">
-                </div>
-              </div>
-              <div class="col-auto py-2">
-                <span>&nbsp;</span>
-                <i class="far fa-play-circle"></i>
-                <span>&nbsp;</span>
-              </div>
-              <div class="">
-                <div class="straight-line">
-                </div>
-              </div>
-              <div class="col py-2">
-                <span class="">
-                  BOXSCORE
-                </span>
-              </div>
-              <div class="">
-                <div class="straight-line">
-                </div>
-              </div>
-              <div class="col py-2">
-                <span class="">
-                  PLAY BY PLAY
-                </span>
-              </div>
+          <div class="vs">
+            <div class="without-number">
+              <p><span>VS</span></p>
             </div>
-
+          </div>
+          <div class="team" id="team-2">
+            <div class="team-logo">
+              <img src="/images/demo/team-logo-4.png" alt="">
+              <div class="team-name">松山家商</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="items">
+            <div class="item" id="item-not-yet">未開賽</div>
           </div>
         </div>
 
       </div>
-
-      <div class="slick-item">
-        <div class="text-center">
-          <p class="caption">區域季後賽 北1區-東 2019-11-01 18:00 ＸＸ球場</p>
-          <div class="container-fluid px-5">
-            <div class="row no-gutters">
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-2.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">松山家商</b>
-              </div>
-              <div class="col-6 px-0 flex-column justify-content-center">
-                <h3> vs </h3>
-              </div>
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-3.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">永春高中</b>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div class="py-2">
-            <span class="caption">&nbsp;</span>
-          </div>
-
-          <div class="container-fluid">
-            <div class="row bottom-bar">
-              <div class="col-auto bg-theme py-2">
-                <span>未開賽</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="slick-item">
-        <div class="text-center">
-          <p class="caption">區域季後賽 北1區-東 2019-11-01 18:00 ＸＸ球場</p>
-          <div class="container-fluid px-5">
-            <div class="row no-gutters">
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-2.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">松山家商</b>
-              </div>
-              <div class="col-6 px-0 flex-column justify-content-center">
-                <h3> vs </h3>
-              </div>
-              <div class="col-3">
-                <img class="img-fluid" src="images/demo/team-logo-3.png" />
-                <br />
-                <br />
-                <b class="col-content-wide">永春高中</b>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div class="py-2">
-            <span class="caption">&nbsp;</span>
-          </div>
-
-          <div class="container-fluid">
-            <div class="row bottom-bar">
-              <div class="col-auto bg-theme py-2">
-                <span>未開賽</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-
     </div>
-
-    <div id="more-btn-container">
-      <button class="btn btn-theme-fill px-4 py-2">更多賽程<img src="images/button-arrow-white.svg" /></button>
-    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
-
+  <div id="more-btn-container">
+    <button class="btn btn-theme-fill">更多賽程<img src="images/button-arrow-white.svg" /></button>
+  </div>
+  <!-- 最新消息 News -->
   <div class="container my-5">
     <div class="row" id="news-featured-wrapper">
       <div class="col-12 mb-5 col-lg-6 mb-lg-0">
@@ -380,8 +278,8 @@
           <div>
             <h3 class="text-theme">最新消息</h3>
             <div id="news-container">
-              <p><a href="" class="link-dark">【運動員轉⾝後】籃魂信念， 雄鷹⾼⾶— 姜豐年</a></p>
-              <p><a href="" class="link-dark">【運動員轉⾝後】終⽣籃球魂− 黑⼈陳建州</a></p>
+              <p><a href="" class="link-dark">【運動員轉身後】籃魂信念， 雄鷹高飛— 姜豐年</a></p>
+              <p><a href="" class="link-dark">【運動員轉身後】終⽣籃球魂− 黑⼈陳建州</a></p>
               <p><a href="" class="link-dark">【運動員轉身後】許晉哲眼中的台灣籃球</a></p>
               <p><a href="" class="link-dark">【C X 校友說】五年兩冠的背後， 陳堅恩的信仰與⼈⽣</a></p>
             </div>
@@ -391,8 +289,8 @@
           <div>
             <h3 class="text-theme">精選文章</h3>
             <div id="featured-container">
-              <p><a href="" class="link-dark">【運動員轉⾝後】籃魂信念， 雄鷹⾼⾶— 姜豐年</a></p>
-              <p><a href="" class="link-dark">【運動員轉⾝後】終⽣籃球魂− 黑⼈陳建州</a></p>
+              <p><a href="" class="link-dark">【運動員轉身後】籃魂信念， 雄鷹高飛— 姜豐年</a></p>
+              <p><a href="" class="link-dark">【運動員轉身後】終⽣籃球魂− 黑⼈陳建州</a></p>
               <p><a href="" class="link-dark">【運動員轉身後】許晉哲眼中的台灣籃球</a></p>
               <p><a href="" class="link-dark">【C X 校友說】五年兩冠的背後， 陳堅恩的信仰與⼈⽣</a></p>
             </div>

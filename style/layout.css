@@ -4,6 +4,18 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none !important;
+}
+
+*:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+body,
+html {
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 ul {
@@ -16,6 +28,27 @@ a,
 a:hover {
   color: white;
   text-decoration: none !important;
+}
+
+.btn {
+  padding: 10px 15px;
+}
+
+.btn img {
+  margin-left: 15px;
+}
+
+.btn-theme {
+  background-color: transparent;
+  border-color: #e94f1b;
+  border-radius: 0;
+  color: #e94f1b;
+}
+
+.btn-theme-fill {
+  background-color: #e94f1b;
+  border-radius: 0;
+  color: white;
 }
 
 header {

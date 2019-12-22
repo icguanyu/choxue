@@ -1,0 +1,319 @@
+@charset "UTF-8";
+/* 首頁-Banner #top-carousel*/
+#top-carousel {
+  height: 460px;
+}
+
+#top-carousel:hover .swiper-button-next,
+#top-carousel:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+#top-carousel .swiper-button-next,
+#top-carousel .swiper-button-prev {
+  opacity: 0;
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 55px;
+  border-style: solid;
+  border-color: #e94f1b;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+#top-carousel .swiper-button-prev {
+  left: 0;
+  border-width: 1px 1px 1px 0;
+  background-image: url("../images/svg/left-orange-arrow.svg");
+}
+
+#top-carousel .swiper-button-next {
+  right: 0;
+  border-width: 1px 0px 1px 1px;
+  background-image: url("../images/svg/right-orange-arrow.svg");
+}
+
+#top-carousel .swiper-button-next::after,
+#top-carousel .swiper-button-prev::after {
+  content: "";
+}
+
+#top-carousel .swiper-pagination-bullet {
+  background: white;
+  opacity: 1;
+  border-radius: 0;
+  width: 60px;
+  height: 2px;
+}
+
+#top-carousel .swiper-pagination-bullet-active {
+  background: #e94f1b;
+}
+
+#top-carousel .swiper-slide {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#top-carousel .swiper-slide:after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+#top-carousel .swiper-slide .banner {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#top-carousel .swiper-slide .swiper-text {
+  width: 80%;
+  z-index: 1;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 996px) {
+  #top-carousel .swiper-button-next,
+  #top-carousel .swiper-button-prev {
+    display: none;
+  }
+  #top-carousel .swiper-slide img {
+    min-width: 100%;
+    width: initial !important;
+    height: 100%;
+  }
+  #top-carousel .swiper-slide .swiper-text {
+    width: 70%;
+    font-size: 2rem;
+  }
+}
+
+/* 首頁-即時賽況 #live-game*/
+#live-game {
+  height: 270px;
+}
+
+#live-game .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-style: solid;
+  border-color: #D3D3D3;
+  border-width: 0px 0.5px 0.5px 0px;
+}
+
+#live-game .swiper-slide:first-child {
+  border-width: 0px 0.5px 0.5px 0.5px;
+}
+
+#live-game .swiper-slide .date {
+  margin-top: 15px;
+  text-align: center;
+  color: #707070;
+}
+
+#live-game .swiper-slide .player {
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+#live-game .swiper-slide .player .team {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#live-game .swiper-slide .player .team .team-logo {
+  text-align: center;
+}
+
+#live-game .swiper-slide .player .team .team-logo img {
+  max-width: 90px;
+}
+
+#live-game .swiper-slide .player .vs {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#live-game .swiper-slide .player .vs .with-number {
+  letter-spacing: 6px;
+  margin: 0 20px;
+}
+
+#live-game .swiper-slide .player .vs .with-number p {
+  margin: 0 auto;
+}
+
+#live-game .swiper-slide .player .vs .with-number span {
+  letter-spacing: 3px;
+}
+
+#live-game .swiper-slide .player .vs .with-number .high-light {
+  color: #e94f1b;
+}
+
+#live-game .swiper-slide .bottom {
+  width: 100%;
+}
+
+#live-game .swiper-slide .bottom .msg {
+  text-align: center;
+  padding: 3px;
+  color: #707070;
+  background: #F3F3F3;
+}
+
+#live-game .swiper-slide .bottom .items {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #e94f1b;
+}
+
+#live-game .swiper-slide .bottom .items .item {
+  padding: 8px 0;
+  text-align: center;
+  border-right: 1px solid #e94f1b;
+}
+
+#live-game .swiper-slide .bottom .items .item:last-child {
+  border: none;
+}
+
+#live-game .swiper-slide .bottom .items #item-live {
+  background: #e94f1b;
+  color: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#live-game .swiper-slide .bottom .items #item-play {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#live-game .swiper-slide .bottom .items #item-play img {
+  height: 20px;
+}
+
+#live-game .swiper-slide .bottom .items #item-boxscore {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#live-game .swiper-slide .bottom .items #item-playbyplay {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#live-game .swiper-slide .bottom .items #item-not-yet {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #707070;
+  background: #F3F3F3;
+  text-align: center;
+}
+
+#live-game .swiper-button-next,
+#live-game .swiper-button-prev {
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+#live-game .swiper-button-prev {
+  left: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  background-image: url("../images/svg/rignt-arrow.svg");
+}
+
+#live-game .swiper-button-next {
+  right: 0;
+  background-image: url("../images/svg/rignt-arrow.svg");
+}
+
+#live-game .swiper-button-next::after,
+#live-game .swiper-button-prev::after {
+  content: "";
+}
+
+#live-game:hover + #more-btn-container {
+  opacity: 1;
+}
+
+#more-btn-container {
+  opacity: 0;
+  text-align: right;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+#more-btn-container .btn {
+  font-size: 1.4rem;
+  padding: 10px 40px;
+}
+
+#more-btn-container:hover {
+  opacity: 1;
+}
+
+@media (max-width: 996px) {
+  #more-btn-container {
+    opacity: 1;
+  }
+}
