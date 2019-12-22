@@ -22,8 +22,8 @@ var mySwiper = new Swiper('#live-game', {
   loop: true,
   slidesPerView: 1,
   navigation: {
-    nextEl: '#top-carousel .swiper-button-next',
-    prevEl: '#top-carousel .swiper-button-prev',
+    nextEl: '#live-game .swiper-button-next',
+    prevEl: '#live-game .swiper-button-prev',
   },
   breakpoints: {
     1330: {

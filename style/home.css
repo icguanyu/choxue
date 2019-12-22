@@ -1,45 +1,4 @@
-#second-carousel .bottom-bar {
-  color: #e94f1b;
-  font-size: 0.6rem;
-  font-weight: bold;
-  border-bottom: 1px solid #e94f1b;
-  align-items: center;
-}
 
-#second-carousel .slick-arrow {
-  z-index: 2;
-  background-position: 0%;
-  background-repeat: no-repeat;
-  background-origin: padding-box;
-  background-clip: padding-box;
-  background-color: transparent;
-}
-#second-carousel .slick-arrow.slick-prev {
-  left: 5;
-  background-image: url("../../images/chevron-left.svg");
-}
-#second-carousel .slick-arrow.slick-next {
-  right: 5;
-  background-image: url("../../images/chevron-right.svg");
-}
-
-#second-carousel #more-btn-container {
-  text-align: right;
-  opacity: 0;
-}
-
-#second-carousel:hover #more-btn-container {
-  opacity: 1;
-  animation: opacity 1 0.5s;
-}
-
-#second-carousel .straight-line {
-  border-left: 1px solid #e94f1b;
-  margin: 2px auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  height: 30.4px;
-}
 
 #news-featured-wrapper .news-title {
   position: absolute;

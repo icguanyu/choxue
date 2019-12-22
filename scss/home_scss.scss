@@ -1,0 +1,375 @@
+@import "_variables.scss";
+/* 首頁-Banner #top-carousel*/
+#top-carousel {
+  height: 460px;
+  &:hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 1;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0;
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 55px;
+    border-style: solid;
+    border-color: $primary;
+    transition: opacity 0.3s;
+  }
+  .swiper-button-prev {
+    left: 0;
+    border-width: 1px 1px 1px 0;
+    background-image: url("../images/svg/left-orange-arrow.svg");
+  }
+  .swiper-button-next {
+    right: 0;
+    border-width: 1px 0px 1px 1px;
+    background-image: url("../images/svg/right-orange-arrow.svg");
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+  }
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 1;
+    border-radius: 0;
+    width: 60px;
+    height: 2px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #e94f1b;
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+      content: "";
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    }
+    .banner {
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .swiper-text {
+      width: 80%;
+      z-index: 1;
+      color: white;
+      font-size: 2rem;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 996px) {
+  #top-carousel {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-slide {
+      img {
+        min-width: 100%;
+        width: initial !important;
+        height: 100%;
+      }
+      .swiper-text {
+        width: 70%;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+/* 首頁-即時賽況 #live-game*/
+
+#live-game {
+  height: 270px;
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: $gray-border;
+    border-width: 0px 0.5px 0.5px 0px;
+    &:first-child {
+      border-width: 0px 0.5px 0.5px 0.5px;
+    }
+    .date {
+      margin-top: 15px;
+      text-align: center;
+      color: $gray-text;
+    }
+    .player {
+      text-align: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      .team {
+        flex: 1;
+        .team-logo {
+          text-align: center;
+          img {
+            max-width: 90px;
+          }
+        }
+      }
+      .vs {
+        flex: 1;
+        font-size: 2rem;
+        font-weight: 600;
+        .with-number {
+          letter-spacing: 6px;
+          margin: 0 20px;
+          p {
+            margin: 0 auto;
+          }
+          span {
+            letter-spacing: 3px;
+          }
+          .high-light {
+            color: $primary;
+          }
+        }
+      }
+    }
+    .bottom {
+      width: 100%;
+      .msg {
+        text-align: center;
+        padding: 3px;
+        color: $gray-text;
+        background: $gray-light;
+      }
+      .items {
+        text-align: center;
+        display: flex;
+        color: $primary;
+        .item {
+          padding: 8px 0;
+          text-align: center;
+          border-right: 1px solid $primary;
+          &:last-child {
+            border: none;
+          }
+        }
+        #item-live {
+          background: $primary;
+          color: white;
+          flex: 1;
+        }
+        #item-play {
+          flex: 1;
+          img {
+            height: 20px;
+          }
+        }
+        #item-boxscore {
+          flex: 2;
+        }
+        #item-playbyplay {
+          flex: 2;
+        }
+        #item-not-yet {
+          flex: 1;
+          color: $gray-text;
+          background: $gray-light;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+  .swiper-button-prev {
+    left: 0;
+    transform: rotateZ(180deg);
+    background-image: url("../images/svg/rignt-arrow.svg");
+  }
+  .swiper-button-next {
+    right: 0;
+    background-image: url("../images/svg/rignt-arrow.svg");
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+  }
+  &:hover + #more-btn-container {
+    opacity: 1;
+  }
+}
+#more-btn-container {
+  opacity: 0;
+  text-align: right;
+  transition: opacity 0.3s;
+  .btn {
+    font-size: 1.4rem;
+    padding: 10px 40px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 996px) {
+  #more-btn-container {
+    opacity: 1;
+    .btn {
+      font-size: 1.2rem;
+      padding: 8px 30px;
+    }
+  }
+}
+
+/* 首頁 最新消息 News */
+#home-news {
+  max-width: 95%;
+  width: 1140px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  > div {
+    padding: 30px;
+  }
+  .hot {
+    position: relative;
+    .cover {
+      width: 480px;
+      height: 360px;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        transition: all 0.3s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+      }
+      &:hover {
+        img {
+          transform: scale(1.05) translate(-50%, -50%);
+        }
+      }
+    }
+    .link-block {
+      padding: 20px 60px;
+      position: absolute;
+      background: $primary;
+      bottom: 0%;
+      left: 0%;
+      color: white;
+      .hot-title {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+      &:after {
+        position: absolute;
+        right: -10%;
+        bottom: 40%;
+        content: "";
+        width: 70px;
+        height: 30px;
+        background-image: url("/images/svg/news-white-arrow.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+  .content {
+    > div {
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 1.5rem;
+      color: $primary;
+      margin-bottom: 15px;
+    }
+    ul {
+      li {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+@media (max-width: 996px) {
+  #home-news {
+    margin: 20px auto;
+    max-width: 100%;
+    flex-direction: column;
+    > div {
+      width: 100%;
+      padding: 20px;
+    }
+    .hot {
+      .cover {
+        width: 100%;
+        max-height: 320px;
+      }
+      .link-block {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
+        .hot-title {
+          font-size: 1.2rem;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .content {
+      > div {
+        margin-bottom: 10px;
+      }
+      .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      ul {
+        li {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+}
