@@ -187,11 +187,11 @@
   right: 10px;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   #rank-wrapper {
     padding-left: 6%;
   }
-}
+} */
 
 #rank-wrapper #rank-container {
   padding-top: 2rem;
