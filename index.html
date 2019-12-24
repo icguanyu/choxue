@@ -13,9 +13,8 @@
   <link rel="stylesheet" type="text/css" href="lib/css/slick.css" />
   <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css" />
 
-  <!-- swiper -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css' />
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+  <!-- swiper 4.5.1 -->
+  <link rel="stylesheet" type="text/css" href="lib/css/swiper.min.css" />
   <link rel="stylesheet" href="style/layout.css">
   <link rel="stylesheet" href="style/home_scss.css">
 
@@ -259,7 +258,6 @@
     <button class="btn btn-theme-fill">更多賽程<img src="images/button-arrow-white.svg" /></button>
   </div>
   <!-- 最新消息 News -->
-
   <div id="home-news">
     <div class="hot">
       <div class="cover">
@@ -340,11 +338,148 @@
     </div>
 
   </div>
-  
-
 
   <div id="star-rank-wrapper">
-    <!-- <img class="" id="banner" src="images/demo/Image66.png" /> -->
+    <div class="star">
+
+      <div class="swiper-container" id="star-carousel">
+        <div class="title">焦點球星</div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="pic">
+              <img src="images/demo/player-1.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="bottom">
+              <div class="info">
+                <h3>王安安</h3>
+                <span>#13 後衛/基隆商工</span>
+                <div class="team-logo">
+                  <img src="images/demo/team-logo-4.png" id="team-logo" />
+                </div>
+              </div>
+              <div class="score">
+                <div class="item">
+                  <h5>效率</h5>
+                  <p>25.1</p>
+                </div>
+                <div class="item">
+                  <h5>得分</h5>
+                  <p>18</p>
+                </div>
+                <div class="item">
+                  <h5>籃板</h5>
+                  <p>8</p>
+                </div>
+                <div class="item">
+                  <h5>助攻</h5>
+                  <p>2</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pic">
+              <img src="images/demo/player-2.jpg" alt="Responsive image">
+            </div>
+            <div class="bottom">
+              <div class="info">
+                <h3>王安安</h3>
+                <span>#13 後衛/基隆商工</span>
+                <div class="team-logo">
+                  <img src="images/demo/team-logo-5.png" id="team-logo" />
+                </div>
+              </div>
+              <div class="score">
+                <div class="item">
+                  <h5>效率</h5>
+                  <p>25.1</p>
+                </div>
+                <div class="item">
+                  <h5>得分</h5>
+                  <p>18</p>
+                </div>
+                <div class="item">
+                  <h5>籃板</h5>
+                  <p>8</p>
+                </div>
+                <div class="item">
+                  <h5>助攻</h5>
+                  <p>2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pic">
+              <img src="images/demo/player-3.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="bottom">
+              <div class="info">
+                <h3>王安安</h3>
+                <span>#13 後衛/基隆商工</span>
+                <div class="team-logo">
+                  <img src="images/demo/team-logo-4.png" id="team-logo" />
+                </div>
+              </div>
+              <div class="score">
+                <div class="item">
+                  <h5>效率</h5>
+                  <p>25.1</p>
+                </div>
+                <div class="item">
+                  <h5>得分</h5>
+                  <p>18</p>
+                </div>
+                <div class="item">
+                  <h5>籃板</h5>
+                  <p>8</p>
+                </div>
+                <div class="item">
+                  <h5>助攻</h5>
+                  <p>2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pic">
+              <img src="images/demo/player-3.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="bottom">
+              <div class="info">
+                <h3>王安安</h3>
+                <span>#13 後衛/基隆商工</span>
+                <div class="team-logo">
+                  <img src="images/demo/team-logo-4.png" id="team-logo" />
+                </div>
+              </div>
+              <div class="score">
+                <div class="item">
+                  <h5>效率</h5>
+                  <p>25.1</p>
+                </div>
+                <div class="item">
+                  <h5>得分</h5>
+                  <p>18</p>
+                </div>
+                <div class="item">
+                  <h5>籃板</h5>
+                  <p>8</p>
+                </div>
+                <div class="item">
+                  <h5>助攻</h5>
+                  <p>2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="star-rank-wrapper">
     <div id="star-rank-container" class="pt-5 pb-lg-5">
       <div id="star-wrapper" class="container">
         <span class="h5 text-white">焦點球星</span>
@@ -1327,7 +1462,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="divider-space-3"></div>
 
@@ -1582,9 +1717,10 @@
 <script src="lib/js/bootstrap-4.1.0.min.js"></script>
 <!--Layout-->
 <script src="js/layout.js"></script>
-<!--swiper-->
+
 <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
+<!--swiper4.5.1-->
+<script src='lib/js/swiper.min.js'></script>
 <script src="js/swiper.js"></script>
 <script src="js/main.js"></script>
 <script src="lib/js/slick.min.js"></script>

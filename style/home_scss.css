@@ -565,7 +565,7 @@
   left: 0;
   right: 0;
   bottom: 16px;
-  content: url("../../images/icon-ball.svg");
+  content: url("../images/icon-ball.svg");
   height: 1px;
   text-align: center;
   z-index: 1;
@@ -641,7 +641,8 @@
   #schedule .container .content .past span:last-child {
     border-right: 2px solid #e94f1b;
   }
-  #schedule .container .content .future span:last-child, #schedule .container .content .active span:last-child {
+  #schedule .container .content .future span:last-child,
+  #schedule .container .content .active span:last-child {
     border-right: 2px solid #D3D3D3;
   }
   #schedule .container .content .active:before {
@@ -655,4 +656,110 @@
   #schedule .container .content .active:after {
     top: 10%;
   }
+}
+
+/* 焦點球星 star-rank-wrapper */
+#star-rank-wrapper {
+  position: relative;
+  background-color: #e94f1b;
+  background-image: url("../images/demo/Image66.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+#star-rank-wrapper .star #star-carousel {
+  max-width: 95%;
+  width: 1140px;
+}
+
+#star-rank-wrapper .star #star-carousel .title {
+  color: white;
+  margin: 30px 0;
+  font-size: 1.5rem;
+}
+
+#star-rank-wrapper .swiper-wrapper {
+  margin-bottom: 40px;
+}
+
+#star-rank-wrapper .swiper-slide {
+  padding: 0 40px;
+}
+
+#star-rank-wrapper .swiper-slide .pic {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+}
+
+#star-rank-wrapper .swiper-slide .pic img {
+  width: 100%;
+  min-height: 100%;
+}
+
+#star-rank-wrapper .swiper-slide .bottom {
+  color: white;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .info {
+  background: black;
+  position: relative;
+  padding: 10px 20px;
+  margin-left: -20px;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .info span {
+  letter-spacing: 2px;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .info .team-logo {
+  position: absolute;
+  background: white;
+  right: 10px;
+  border: 5px solid white;
+  top: -30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .info .team-logo img {
+  width: 100%;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .score {
+  background: #e94f1b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .score .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5px 10px;
+  border-left: 0.5px solid rgba(255, 255, 255, 0.7);
+}
+
+#star-rank-wrapper .swiper-slide .bottom .score .item h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .score .item p {
+  margin: 0 auto;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .score .item:first-child {
+  border: none;
+}
+
+#star-rank-wrapper .swiper-slide .bottom .score .item:first-child p {
+  font-weight: 600;
+  font-size: 2rem;
 }

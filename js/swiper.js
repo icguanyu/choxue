@@ -37,3 +37,23 @@ var mySwiper = new Swiper('#live-game', {
     }
   }
 });
+
+/* 首頁-點球星 star-rank-wrapper #star-carousel*/
+var mySwiper = new Swiper('#star-carousel', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 40,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    996: {
+      slidesPerView: 2,
+    },
+    768: {
+      spaceBetween: 10,
+      slidesPerView: 1,
+    }
+  }
+});
