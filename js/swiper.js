@@ -58,19 +58,28 @@ var mySwiper = new Swiper('#star-carousel', {
   }
 });
 
-/* 首頁-六王  #king-carousel*/
-var mySwiper = new Swiper('#king-carousel', {
-  allowTouchMove: false,
-  spaceBetween: 40,
-  slidesPerView: 3,
-  slidesPerColumn: 2,
-  breakpoints: {
-    996: {
-      spaceBetween: 20,
-      loop: true,
-      allowTouchMove: true,
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-    }
-  }
-});
+/* 首頁-排名-得分王  #king-carousel*/
+/* 額外偵聽螢幕斷點，切換 options */
+let ResponsiveSwiper
+const breakpoint = window.matchMedia('(max-width:996px)');
+const breakpointChecker = () => {
+  if (ResponsiveSwiper !== undefined) ResponsiveSwiper.destroy(true, true);
+  ResponsiveSwiper = new Swiper('#king-carousel',
+    breakpoint.matches === true ?
+      {
+        allowTouchMove: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+      }
+      :
+      {
+        allowTouchMove: false,
+        spaceBetween: 40,
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+      }
+  );
+}
+breakpoint.addListener(breakpointChecker);
+breakpointChecker()
