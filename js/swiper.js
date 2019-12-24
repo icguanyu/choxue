@@ -60,6 +60,7 @@ var mySwiper = new Swiper('#star-carousel', {
 
 /* 首頁-排名-得分王  #king-carousel*/
 /* 額外偵聽螢幕斷點，切換 options */
+/* https://medium.com/p/a947491ddec8/responses/show */
 let ResponsiveSwiper
 const breakpoint = window.matchMedia('(max-width:996px)');
 const breakpointChecker = () => {
@@ -67,6 +68,7 @@ const breakpointChecker = () => {
   ResponsiveSwiper = new Swiper('#king-carousel',
     breakpoint.matches === true ?
       {
+        loop: true,
         allowTouchMove: true,
         spaceBetween: 20,
         slidesPerView: 1,

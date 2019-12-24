@@ -1248,3 +1248,94 @@
     padding-right: 100px;
   }
 }
+
+/* 照片 */
+#pictures {
+  max-width: 100%;
+  width: 1140px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+#pictures .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+#pictures .header .title {
+  color: #e94f1b;
+}
+
+#pictures .waterfall .item {
+  width: 33.33%;
+  padding: 15px;
+  padding: 0 15px 15px 0px;
+}
+
+#pictures .waterfall .item .content {
+  position: relative;
+  cursor: pointer;
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0.8;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#pictures .waterfall .item .content img {
+  width: 100%;
+}
+
+#pictures .waterfall .item .content .bottom {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  background: #e94f1b;
+  text-align: center;
+  color: white;
+  padding: 5px 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#pictures .waterfall .item .content:hover {
+  opacity: 1;
+}
+
+#pictures .waterfall .item .content:hover .bottom {
+  bottom: 0;
+}
+
+@media (max-width: 996px) {
+  #pictures {
+    width: 95%;
+    margin: auto;
+  }
+  #pictures .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #pictures .header .title {
+    color: #e94f1b;
+  }
+  #pictures .waterfall .item {
+    width: 50%;
+    padding: 0 10px 10px 0;
+  }
+}

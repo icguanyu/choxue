@@ -715,7 +715,7 @@
               position: absolute;
               top: 50%;
               left: 50%;
-              transform: translate(-50%,-50%);
+              transform: translate(-50%, -50%);
               width: 100%;
               max-width: 250px;
             }
@@ -902,12 +902,12 @@
         .header {
           position: relative;
           flex-wrap: wrap;
-          .title{
+          .title {
             width: 100%;
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: wrap;
-            .switch{
+            .switch {
               display: flex;
               justify-content: space-between;
               width: 100%;
@@ -915,13 +915,13 @@
               margin-top: 30px;
             }
           }
-          .btns{
+          .btns {
             position: absolute;
             top: 0;
             right: 0;
-            .btn{
+            .btn {
               padding: 5px 8px;
-              .arrow{
+              .arrow {
                 width: 30px;
               }
             }
@@ -953,7 +953,7 @@
                 padding: 0 10px;
                 font-weight: normal;
               }
-              td{
+              td {
                 padding: 8px 5px;
               }
               .team {
@@ -969,6 +969,78 @@
         #king-carousel {
           padding-right: 100px;
         }
+      }
+    }
+  }
+}
+
+/* 照片 */
+#pictures {
+  max-width: 100%;
+  width: 1140px;
+  margin: auto;
+  padding: 40px 0;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    .title {
+      color: $primary;
+    }
+  }
+  .waterfall {
+    .item {
+      width: 33.33%;
+      padding: 15px;
+      padding: 0 15px 15px 0px;
+      .content {
+        position: relative;
+        cursor: pointer;
+        border-radius: 2px;
+        overflow: hidden;
+        opacity: 0.8;
+        transition: all 0.2s;
+        img {
+          width: 100%;
+        }
+        .bottom {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -100%;
+          background: $primary;
+          text-align: center;
+          color: white;
+          padding: 5px 0;
+          transition: all 0.2s;
+        }
+        &:hover {
+          opacity: 1;
+          .bottom {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 996px) {
+  #pictures {
+    width: 95%;
+    margin: auto;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        color: $primary;
+      }
+    }
+    .waterfall {
+      .item {
+        width: 50%;
+        padding: 0 10px 10px 0;
       }
     }
   }
