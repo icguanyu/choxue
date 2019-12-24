@@ -20,20 +20,20 @@ var mySwiper = new Swiper('#top-carousel', {
 /* 首頁-即時賽況 #live-game*/
 var mySwiper = new Swiper('#live-game', {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 4,
   navigation: {
     nextEl: '#live-game .swiper-button-next',
     prevEl: '#live-game .swiper-button-prev',
   },
   breakpoints: {
     1330: {
-      slidesPerView: 4,
-    },
-    1080: {
       slidesPerView: 3,
     },
-    768: {
+    1080: {
       slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 1,
     }
   }
 });
