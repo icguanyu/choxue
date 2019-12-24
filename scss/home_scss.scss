@@ -305,7 +305,7 @@
         content: "";
         width: 70px;
         height: 30px;
-        background-image: url("/images/svg/news-white-arrow.svg");
+        background-image: url("../images/svg/news-white-arrow.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
@@ -324,7 +324,12 @@
     ul {
       li {
         font-size: 1.2rem;
-        line-height: 2rem;
+        line-height: 1.6rem;
+        padding: 5px 0;
+        border-bottom: 1px dashed $gray-border;
+        &:last-child {
+          border: none;
+        }
       }
     }
   }
@@ -368,6 +373,158 @@
         li {
           font-size: 1rem;
           line-height: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* 賽程進度表 schedule */
+#schedule {
+  width: 100%;
+  background: $gray-light;
+  margin-top: 30px;
+  padding: 60px 0;
+  .container {
+    width: 1140px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 100%;
+      background: $primary;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    .title {
+      position: relative;
+      color: white;
+      font-weight: 600;
+      font-size: 1.5rem;
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+    .content {
+      display: flex;
+      padding-left: 20px;
+      .item {
+        flex: 1;
+        background: white;
+        padding: 15px 10px;
+        text-align: center;
+        border-style: solid;
+        border-color: $gray-border;
+        border-width: 1px 1px 1px 0;
+        color: $primary;
+        font-size: 16px;
+        &:first-child {
+          border-width: 1px;
+        }
+      }
+      .past {
+        border-bottom: 1px solid $primary;
+      }
+      .future {
+        color: $gray-border;
+        
+      }
+      .active {
+        position: relative;
+      }
+      .active:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background: $primary;
+      }
+      .active:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 16px;
+        content: url("../../images/icon-ball.svg");
+        height: 1px;
+        text-align: center;
+        z-index: 1;
+      }
+    }
+  }
+}
+@media (max-width: 996px) {
+  #schedule {
+    margin: 0 auto;
+    padding: 0;
+    .container {
+      max-width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      padding-top: 0;
+      &:after {
+        width: 200px;
+        height: 150px;
+        top: -20px;
+      }
+      .title {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        background: white;
+        .item {
+          padding: 0;
+          flex: 1;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          border: none;
+          span {
+            padding: 12px;
+            flex: 1;
+          }
+        }
+        .item:first-child{
+          span{
+            padding-top: 20px;
+          }
+        }.item:last-child{
+          span{
+            padding-bottom: 20px;
+          }
+        }
+        .past {
+          span:last-child {
+            border-right: 2px solid $primary;
+          }
+        }
+        .future,.active {
+          span:last-child {
+            border-right: 2px solid $gray-border;
+          }
+        }
+        .active:before {
+          top: 0;
+          width: 2px;
+          height: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .active:after {
+          top: 10%;
         }
       }
     }

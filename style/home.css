@@ -1,17 +1,4 @@
 
-
-#news-featured-wrapper .news-title {
-  position: absolute;
-  left: 5;
-  bottom: -10px;
-  right: 20%;
-}
-#news-featured-wrapper .news-title .news-title-arrow {
-  position: absolute;
-  right: -20px;
-  top: 70%;
-}
-
 .d-desktop #schedule-wrapper {
   position: relative;
   height: 160px;
@@ -19,9 +6,7 @@
 .d-desktop #schedule-wrapper #title {
   color: white;
   background-color: #e94f1b;
-  margin-left: -10px;
-  padding-left: 30px;
-  padding-top: 15px;
+  
   width: 30%;
   height: 160px;
   z-index: -1;
