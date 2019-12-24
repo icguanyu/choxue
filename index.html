@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Index </title>
   <link rel="stylesheet" href="lib/css/bootstrap-4.1.0.min.css">
-  <link rel="stylesheet" href="style/bootstrap-extension.css">
+  <!-- <link rel="stylesheet" href="style/bootstrap-extension.css"> -->
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/home.css">
-  <link rel="stylesheet" type="text/css" href="lib/css/slick.css" />
-  <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="lib/css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css" /> -->
 
   <!-- swiper 4.5.1 -->
   <link rel="stylesheet" type="text/css" href="lib/css/swiper.min.css" />
@@ -963,7 +963,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <div id="photo-wrapper">
       <div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1049,10 +1049,6 @@
 
       </div>
     </div>
-
-    <div class="divider-space-3"></div>
-
-
     <div id="video-wrapper">
       <div class="row">
         <div class="col text-left">
@@ -1066,7 +1062,7 @@
       <br />
       <div class="video-container">
 
-        <!-- <div id="slick-container">
+        <div id="slick-container">
           <div class="slick-item">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MJ11S2iaZoE"
@@ -1097,24 +1093,16 @@
                 allowfullscreen></iframe>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
-
-  </div>
+  </div> -->
 
   <footer>
     <div class="container py-5">
       <div class="row">
-
         <div class="col-12 col-md-6">
           <img class="img-fluid" src="images/logo/1x.png" srcset="images/logo/1x.png 1x, images/logo/2x.png 2x" />
-
-        </div>
-        <div class="col-12 col-md-6">
-          <span>Copyright © 2019 球學股份有限公司 Incorporated.</span>
-          <br />
-          <span>All rights reserved. Power by HOT籃球熱</span>
         </div>
       </div>
       <br />
@@ -1206,11 +1194,18 @@
 
         </div>
       </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <span>Copyright © 2019 球學股份有限公司 Incorporated.</span>
+          <br />
+          <span>All rights reserved. Power by HOT籃球熱</span>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
 <script src="lib/js/jquery-3.3.1.js"></script>
-<script defer src="lib/js/fontawesome-5.12.0.min.js"></script>
+<!-- <script defer src="lib/js/fontawesome-5.12.0.min.js"></script> -->
 <script src="lib/js/bootstrap-4.1.0.min.js"></script>
 <!--Layout-->
 <script src="js/layout.js"></script>
@@ -1219,84 +1214,8 @@
 <!--swiper4.5.1-->
 <script src='lib/js/swiper.min.js'></script>
 <script src="js/swiper.js"></script>
-<script src="js/main.js"></script>
-<script src="lib/js/slick.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $('#top-carousel #slick-container').slick({
-      // appendArrows: $('#top-carousel #arrow-container'),
-      dots: true,
-      responsive: [
-        {
+<!-- <script src="js/main.js"></script> -->
+<!-- <script src="lib/js/slick.min.js"></script> -->
 
-          breakpoint: 768,
-          settings: {
-            arrows: false
-          }
-        }
-      ]
-    });
-
-    $('#second-carousel #slick-container').slick({
-      dots: false,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          }
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-      ]
-    });
-
-    $('#star-wrapper #slick-container').slick({
-      infinite: false,
-      dots: false,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            appendArrows: $('#star-wrapper #arrow-container'),
-            prevArrow: '<button type="button"><i class="fas fa-chevron-left"></i></button>',
-            nextArrow: '<button type="button"><i class="fas fa-chevron-right"></i></button>'
-          }
-        },
-      ]
-    });
-
-
-    $('#rank-wrapper #slick-container').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      // variableWidth: true,
-
-      // dots: true,
-      // centerMode: true,
-      // focusOnSelect: true
-    });
-
-  });
-</script>
 
 </html>

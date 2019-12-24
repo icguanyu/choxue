@@ -15,34 +15,34 @@ $(function () {
 		$select.text($(this).text())
 	})
 
-  $('.video-container #slick-container').slick({
-    lazyLoad: 'ondemand',
-    dots: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+  // $('.video-container #slick-container').slick({
+  //   lazyLoad: 'ondemand',
+  //   dots: false,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3,
 
-    // prevArrow: '<button type="button"><i class="fas fa-chevron-left"></i></button>',
-    // nextArrow: '<button type="button"><i class="fas fa-chevron-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-	});
+  //   // prevArrow: '<button type="button"><i class="fas fa-chevron-left"></i></button>',
+  //   // nextArrow: '<button type="button"><i class="fas fa-chevron-right"></i></button>',
+  //   responsive: [
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1
+  //       }
+  //     },
+  //     // You can unslick at a given breakpoint now by adding:
+  //     // settings: "unslick"
+  //     // instead of a settings object
+  //   ]
+	// });
 	
 	
 

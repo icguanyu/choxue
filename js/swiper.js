@@ -60,7 +60,7 @@ var mySwiper = new Swiper('#star-carousel', {
 
 /* 首頁-六王  #king-carousel*/
 var mySwiper = new Swiper('#king-carousel', {
-  //allowTouchMove: false,
+  allowTouchMove: false,
   spaceBetween: 40,
   slidesPerView: 3,
   slidesPerColumn: 2,
