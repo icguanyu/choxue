@@ -24,18 +24,65 @@ ul {
   list-style: none;
 }
 
+p {
+  margin: 0;
+}
+
 a,
 a:hover {
   color: white;
   text-decoration: none !important;
 }
 
-.btn {
-  padding: 10px 15px;
+.title {
+  font-size: 1.5rem;
 }
 
-.btn img {
-  margin-left: 15px;
+/* 白色小箭頭 */
+.arrow-prev,
+.arrow-next {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px 2px 0 0;
+}
+
+.arrow-prev {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.arrow-next {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* 白色小箭頭 */
+/* 全域按鈕 */
+.btn {
+  font-weight: normal;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn .arrow {
+  margin-left: 10px;
+  width: 40px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .btn-theme {
@@ -45,12 +92,25 @@ a:hover {
   color: #e94f1b;
 }
 
+.btn-theme .arrow {
+  background-image: url("../images/svg/button-arrow-theme.svg");
+}
+
+.btn-theme:hover .arrow {
+  background-image: url("../images/svg/button-arrow-white.svg");
+}
+
 .btn-theme-fill {
   background-color: #e94f1b;
   border-radius: 0;
   color: white;
 }
 
+.btn-theme-fill .arrow {
+  background-image: url("../images/svg/button-arrow-white.svg");
+}
+
+/* 全域按鈕 */
 header {
   width: 100%;
   background: #000;

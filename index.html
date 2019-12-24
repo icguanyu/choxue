@@ -255,9 +255,12 @@
     <div class="swiper-button-next"></div>
   </div>
   <div id="more-btn-container">
-    <button class="btn btn-theme-fill">更多賽程<img src="images/button-arrow-white.svg" /></button>
+    <button class="btn btn-theme-fill">
+      更多賽程
+      <div class="arrow">
+    </button>
   </div>
-  <!-- 最新消息 News -->
+  <!-- 最新消息 Newsi #home-news -->
   <div id="home-news">
     <div class="hot">
       <div class="cover">
@@ -289,7 +292,7 @@
       </div>
     </div>
   </div>
-  <!--- 賽程進度表 schedule-->
+  <!--- 賽程進度表 #schedule-->
   <div id="schedule">
     <div class="container">
       <div class="title">聯盟賽程進度表</div>
@@ -338,139 +341,141 @@
     </div>
 
   </div>
-
-  <div id="star-rank-wrapper">
-    <div class="star">
-
-      <div class="swiper-container" id="star-carousel">
-        <div class="title">焦點球星</div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="pic">
-              <img src="images/demo/player-1.png" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="bottom">
-              <div class="info">
-                <h3>王安安</h3>
-                <span>#13 後衛/基隆商工</span>
-                <div class="team-logo">
-                  <img src="images/demo/team-logo-4.png" id="team-logo" />
-                </div>
-              </div>
-              <div class="score">
-                <div class="item">
-                  <h5>效率</h5>
-                  <p>25.1</p>
-                </div>
-                <div class="item">
-                  <h5>得分</h5>
-                  <p>18</p>
-                </div>
-                <div class="item">
-                  <h5>籃板</h5>
-                  <p>8</p>
-                </div>
-                <div class="item">
-                  <h5>助攻</h5>
-                  <p>2</p>
-                </div>
-              </div>
-
-            </div>
+  <!--- 焦點球星-球星 schedule-->
+  <div id="star">
+    <div class="swiper-container" id="star-carousel">
+      <div class="title">焦點球星
+        <div class="navigation">
+          <span class="nav" id="prev"></span>
+          <span class="nav" id="next"></span>
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="pic">
+            <img src="images/demo/player-1.jpg" class="img-fluid" alt="Responsive image">
           </div>
-          <div class="swiper-slide">
-            <div class="pic">
-              <img src="images/demo/player-2.jpg" alt="Responsive image">
-            </div>
-            <div class="bottom">
-              <div class="info">
-                <h3>王安安</h3>
-                <span>#13 後衛/基隆商工</span>
-                <div class="team-logo">
-                  <img src="images/demo/team-logo-5.png" id="team-logo" />
-                </div>
-              </div>
-              <div class="score">
-                <div class="item">
-                  <h5>效率</h5>
-                  <p>25.1</p>
-                </div>
-                <div class="item">
-                  <h5>得分</h5>
-                  <p>18</p>
-                </div>
-                <div class="item">
-                  <h5>籃板</h5>
-                  <p>8</p>
-                </div>
-                <div class="item">
-                  <h5>助攻</h5>
-                  <p>2</p>
-                </div>
+          <div class="bottom">
+            <div class="info">
+              <h3>王安安</h3>
+              <span>#13 後衛/基隆商工</span>
+              <div class="team-logo">
+                <img src="images/demo/team-logo-4.png" id="team-logo" />
               </div>
             </div>
+            <div class="score">
+              <div class="item">
+                <h5>效率</h5>
+                <p>25.1</p>
+              </div>
+              <div class="item">
+                <h5>得分</h5>
+                <p>18</p>
+              </div>
+              <div class="item">
+                <h5>籃板</h5>
+                <p>8</p>
+              </div>
+              <div class="item">
+                <h5>助攻</h5>
+                <p>2</p>
+              </div>
+            </div>
+
           </div>
-          <div class="swiper-slide">
-            <div class="pic">
-              <img src="images/demo/player-3.jpg" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="bottom">
-              <div class="info">
-                <h3>王安安</h3>
-                <span>#13 後衛/基隆商工</span>
-                <div class="team-logo">
-                  <img src="images/demo/team-logo-4.png" id="team-logo" />
-                </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pic">
+            <img src="images/demo/player-2.jpg" alt="Responsive image">
+          </div>
+          <div class="bottom">
+            <div class="info">
+              <h3>王安安</h3>
+              <span>#13 後衛/基隆商工</span>
+              <div class="team-logo">
+                <img src="images/demo/team-logo-5.png" id="team-logo" />
               </div>
-              <div class="score">
-                <div class="item">
-                  <h5>效率</h5>
-                  <p>25.1</p>
-                </div>
-                <div class="item">
-                  <h5>得分</h5>
-                  <p>18</p>
-                </div>
-                <div class="item">
-                  <h5>籃板</h5>
-                  <p>8</p>
-                </div>
-                <div class="item">
-                  <h5>助攻</h5>
-                  <p>2</p>
-                </div>
+            </div>
+            <div class="score">
+              <div class="item">
+                <h5>效率</h5>
+                <p>25.1</p>
+              </div>
+              <div class="item">
+                <h5>得分</h5>
+                <p>18</p>
+              </div>
+              <div class="item">
+                <h5>籃板</h5>
+                <p>8</p>
+              </div>
+              <div class="item">
+                <h5>助攻</h5>
+                <p>2</p>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="pic">
-              <img src="images/demo/player-3.jpg" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="bottom">
-              <div class="info">
-                <h3>王安安</h3>
-                <span>#13 後衛/基隆商工</span>
-                <div class="team-logo">
-                  <img src="images/demo/team-logo-4.png" id="team-logo" />
-                </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pic">
+            <img src="images/demo/player-1.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="bottom">
+            <div class="info">
+              <h3>王安安</h3>
+              <span>#13 後衛/基隆商工</span>
+              <div class="team-logo">
+                <img src="images/demo/team-logo-4.png" id="team-logo" />
               </div>
-              <div class="score">
-                <div class="item">
-                  <h5>效率</h5>
-                  <p>25.1</p>
-                </div>
-                <div class="item">
-                  <h5>得分</h5>
-                  <p>18</p>
-                </div>
-                <div class="item">
-                  <h5>籃板</h5>
-                  <p>8</p>
-                </div>
-                <div class="item">
-                  <h5>助攻</h5>
-                  <p>2</p>
-                </div>
+            </div>
+            <div class="score">
+              <div class="item">
+                <h5>效率</h5>
+                <p>25.1</p>
+              </div>
+              <div class="item">
+                <h5>得分</h5>
+                <p>18</p>
+              </div>
+              <div class="item">
+                <h5>籃板</h5>
+                <p>8</p>
+              </div>
+              <div class="item">
+                <h5>助攻</h5>
+                <p>2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pic">
+            <img src="images/demo/player-3.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="bottom">
+            <div class="info">
+              <h3>王安安</h3>
+              <span>#13 後衛/基隆商工</span>
+              <div class="team-logo">
+                <img src="images/demo/team-logo-4.png" id="team-logo" />
+              </div>
+            </div>
+            <div class="score">
+              <div class="item">
+                <h5>效率</h5>
+                <p>25.1</p>
+              </div>
+              <div class="item">
+                <h5>得分</h5>
+                <p>18</p>
+              </div>
+              <div class="item">
+                <h5>籃板</h5>
+                <p>8</p>
+              </div>
+              <div class="item">
+                <h5>助攻</h5>
+                <p>2</p>
               </div>
             </div>
           </div>
@@ -478,141 +483,488 @@
       </div>
     </div>
   </div>
-
-  <!-- <div id="star-rank-wrapper">
-    <div id="star-rank-container" class="pt-5 pb-lg-5">
-      <div id="star-wrapper" class="container">
-        <span class="h5 text-white">焦點球星</span>
-        <span id="arrow-container"></span>
-        <br />
-        <br />
-
-        <div class="row">
-          <div class="col-12 mx-auto">
-            <div id="slick-container">
-              <div class="slick-item">
-                <div class="focus-player">
-                  <img src="images/demo/player-1.png" class="img-fluid" alt="Responsive image">
-                  <div id="name" class="bg-black">
-                    <h3>王安安</h3>
-                    <span>#13 後衛/基隆商工</span>
-                    <img src="images/demo/team-logo-2.png" id="team-logo" />
-                  </div>
-                </div>
-
-                <div class="row text-white bg-theme text-center mx-0">
-                  <div class="col pr-0">
-                    <div class="border-right border-white p-2">
-                      <p class="text-left">效率</p>
-                      <h4> 25.1</h4>
-                    </div>
-                  </div>
-                  <div class="col px-0">
-                    <div class="border-right border-white p-2">
-                      <p>得分</p>
-                      <h4>18</h4>
-                    </div>
-                  </div>
-                  <div class="col px-0">
-                    <div class="border-right border-white p-2">
-                      <p>籃板</p>
-                      <h4>8</h4>
-                    </div>
-                  </div>
-                  <div class="col pl-0">
-                    <div class="p-2">
-                      <p>助攻</p>
-                      <h4>2</h4>
-                    </div>
-                  </div>
-                </div>
-
+  <!--- 排行 #rank-->
+  <div id="rank-wrapper">
+    <div class="wrap">
+      <div class="cotent">
+        <!-- 表頭 -->
+        <div class="header">
+          <div class="title">
+            <p>隊伍排行</p>
+            <div class="switch">
+              <div class="arrow-prev"></div>
+              <p class="area">北1區-基隆</p>
+              <div class="arrow-next"></div>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn btn-theme">更多排行<div class="arrow"></button>
+            <button class="btn btn-theme">更多數據<div class="arrow"></button>
+          </div>
+        </div>
+        <!-- 排行 -->
+        <div class="ranks">
+          <div class="left" id="champion">
+            <div class="team-logo">
+              <img src="images/demo/team-logo-3.png" alt="">
+            </div>
+            <div class="info">
+              <div class="team-name">和平高中</div>
+              <div class="coach">
+                <p>總教練｜李安</p>
+                <p>體育組長｜白小黃</p>
               </div>
-              <div class="slick-item">
-                <div class="focus-player">
-                  <img src="images/demo/player-1.png" class="img-fluid" alt="Responsive image">
-                  <div id="name" class="bg-black">
-                    <h3>王安安</h3>
-                    <span>#13 後衛/基隆商工</span>
-                    <img src="images/demo/team-logo-2.png" id="team-logo" />
-                  </div>
+              <div class="score">
+                <div class="item">
+                  <p class="win">7</p>
                 </div>
-
-                <div class="row text-white bg-theme text-center mx-0">
-                  <div class="col pr-0">
-                    <div class="border-right border-white p-2">
-                      <p class="text-left">效率</p>
-                      <h4> 25.1</h4>
-                    </div>
-                  </div>
-                  <div class="col px-0">
-                    <div class="border-right border-white p-2">
-                      <p>得分</p>
-                      <h4>18</h4>
-                    </div>
-                  </div>
-                  <div class="col px-0">
-                    <div class="border-right border-white p-2">
-                      <p>籃板</p>
-                      <h4>8</h4>
-                    </div>
-                  </div>
-                  <div class="col pl-0">
-                    <div class="p-2">
-                      <p>助攻</p>
-                      <h4>2</h4>
-                    </div>
-                  </div>
+                <div class="item">
+                  <p class="lose">0</p>
                 </div>
-
+                <div class="item">
+                  <p class="range">7</p>
+                </div>
               </div>
-              <div class="slick-item">
-                <div class="focus-player">
-                  <img src="images/demo/player-1.png" class="img-fluid" alt="Responsive image">
-                  <div id="name" class="bg-black">
-                    <h3>王安安</h3>
-                    <span>#13 後衛/基隆商工</span>
-                    <img src="images/demo/team-logo-2.png" id="team-logo" />
+            </div>
+          </div>
+          <div class="right">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">排行</th>
+                  <th scope="col">隊伍</th>
+                  <th scope="col">勝</th>
+                  <th scope="col">敗</th>
+                  <th scope="col">剩分差</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td class="team">
+                    <img src="images/demo/team-logo-1.png" alt="">
+                    <span>安樂高中</span>
+                  </td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td class="team">
+                    <img src="images/demo/team-logo-2.png" alt="">
+                    <span>安樂高中</span>
+                  </td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td class="team">
+                    <img src="images/demo/team-logo-3.png" alt="">
+                    <span>安樂高中</span>
+                  </td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td class="team">
+                    <img src="images/demo/team-logo-4.png" alt="">
+                    <span>安樂高中</span>
+                  </td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td class="team">
+                    <img src="images/demo/team-logo-5.png" alt="">
+                    <span>安樂高中</span>
+                  </td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- 各種王 -->
+        <div class="swiper-container" id="king-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="king-name">得分王</div>
+              <div class="profile">
+                <div class="left">
+                  <img src="images/demo/player-4.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="rank">1</div>
+                    <div class="team-logo">
+                      <img src="images/demo/team-logo-6.png" alt="">
+                    </div>
+                  </div>
+                  <div class="player-name">王安安</div>
+                  <div class="detail">
+                    <div class="player-school">
+                      <p>#12 後衛</p>
+                      <p>和平高中</p>
+                    </div>
+                    <div class="player-number">31</div>
                   </div>
                 </div>
-
-                <div class="row text-white bg-theme text-center mx-0">
-                  <div class="col pr-0">
-                    <div class="border-right border-white p-2">
-                      <p class="text-left">效率</p>
-                      <h4> 25.1</h4>
-                    </div>
-                  </div>
-                  <div class="col px-0">
-                    <div class="border-right border-white p-2">
-                      <p>得分</p>
-                      <h4>18</h4>
-                    </div>
-                  </div>
-                  <div class="col px-0">
-                    <div class="border-right border-white p-2">
-                      <p>籃板</p>
-                      <h4>8</h4>
-                    </div>
-                  </div>
-                  <div class="col pl-0">
-                    <div class="p-2">
-                      <p>助攻</p>
-                      <h4>2</h4>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">排行</th>
+                    <th scope="col">球員</th>
+                    <th scope="col">隊伍</th>
+                    <th scope="col">得分</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="swiper-slide">
+              <div class="king-name">得分王</div>
+              <div class="profile">
+                <div class="left">
+                  <img src="images/demo/player-1.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="rank">1</div>
+                    <div class="team-logo">
+                      <img src="images/demo/team-logo-6.png" alt="">
+                    </div>
+                  </div>
+                  <div class="player-name">王安安</div>
+                  <div class="detail">
+                    <div class="player-school">
+                      <p>#12 後衛</p>
+                      <p>和平高中</p>
+                    </div>
+                    <div class="player-number">31</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">排行</th>
+                    <th scope="col">球員</th>
+                    <th scope="col">隊伍</th>
+                    <th scope="col">得分</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="swiper-slide">
+              <div class="king-name">得分王</div>
+              <div class="profile">
+                <div class="left">
+                  <img src="images/demo/player-2.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="rank">1</div>
+                    <div class="team-logo">
+                      <img src="images/demo/team-logo-6.png" alt="">
+                    </div>
+                  </div>
+                  <div class="player-name">王安安</div>
+                  <div class="detail">
+                    <div class="player-school">
+                      <p>#12 後衛</p>
+                      <p>和平高中</p>
+                    </div>
+                    <div class="player-number">31</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">排行</th>
+                    <th scope="col">球員</th>
+                    <th scope="col">隊伍</th>
+                    <th scope="col">得分</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="swiper-slide">
+              <div class="king-name">得分王</div>
+              <div class="profile">
+                <div class="left">
+                  <img src="images/demo/player-3.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="rank">1</div>
+                    <div class="team-logo">
+                      <img src="images/demo/team-logo-6.png" alt="">
+                    </div>
+                  </div>
+                  <div class="player-name">王安安</div>
+                  <div class="detail">
+                    <div class="player-school">
+                      <p>#12 後衛</p>
+                      <p>和平高中</p>
+                    </div>
+                    <div class="player-number">31</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">排行</th>
+                    <th scope="col">球員</th>
+                    <th scope="col">隊伍</th>
+                    <th scope="col">得分</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="swiper-slide">
+              <div class="king-name">得分王</div>
+              <div class="profile">
+                <div class="left">
+                  <img src="images/demo/player-4.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="rank">1</div>
+                    <div class="team-logo">
+                      <img src="images/demo/team-logo-6.png" alt="">
+                    </div>
+                  </div>
+                  <div class="player-name">王安安</div>
+                  <div class="detail">
+                    <div class="player-school">
+                      <p>#12 後衛</p>
+                      <p>和平高中</p>
+                    </div>
+                    <div class="player-number">31</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">排行</th>
+                    <th scope="col">球員</th>
+                    <th scope="col">隊伍</th>
+                    <th scope="col">得分</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="swiper-slide">
+              <div class="king-name">得分王</div>
+              <div class="profile">
+                <div class="left">
+                  <img src="images/demo/player-5.jpg" alt="">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="rank">1</div>
+                    <div class="team-logo">
+                      <img src="images/demo/team-logo-6.png" alt="">
+                    </div>
+                  </div>
+                  <div class="player-name">王安安</div>
+                  <div class="detail">
+                    <div class="player-school">
+                      <p>#12 後衛</p>
+                      <p>和平高中</p>
+                    </div>
+                    <div class="player-number">31</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">排行</th>
+                    <th scope="col">球員</th>
+                    <th scope="col">隊伍</th>
+                    <th scope="col">得分</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="player">
+                      <p>林一猜</p>
+                      <span>#13 後衛</span>
+                    </td>
+                    <td class="team">
+                      <img src="images/demo/team-logo-1.png" alt="">
+                      <span>安樂高中</span>
+                    </td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
 
       </div>
+    </div>
+  </div>
 
-      <div class="divider-space-3">
-      </div>
-
+  <!-- <div id="star-rank-wrapper">
+    <div id="star-rank-container" class="pt-5 pb-lg-5">
       <div id="rank-wrapper">
         <div id="rank-container" class="bg-grey container-fluid">
           <div class="row d-none d-lg-flex">
@@ -1464,7 +1816,7 @@
     </div>
   </div> -->
 
-  <div class="divider-space-3"></div>
+
 
   <div class="container">
     <div id="photo-wrapper">

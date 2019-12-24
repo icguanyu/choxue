@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
 @import "_variables.scss";
+
 /* 重複出現的元件 ex: menu,footer ... */
 
 * {
@@ -19,15 +20,53 @@ ul {
   padding: 0;
   list-style: none;
 }
+p{
+  margin: 0;
+}
 a,
 a:hover {
   color: white;
   text-decoration: none !important;
 }
-.btn{
+.title{
+  font-size: 1.5rem;
+}
+/* 白色小箭頭 */
+.arrow-prev,
+.arrow-next {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px 2px 0 0;
+}
+.arrow-prev {
+  transform: rotate(-135deg);
+}
+.arrow-next {
+  transform: rotate(45deg);
+}
+
+/* 白色小箭頭 */
+
+/* 全域按鈕 */
+.btn {
+  font-weight: normal;
+  letter-spacing: 2px;
   padding: 10px 15px;
-  img{
-    margin-left: 15px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  .arrow {
+    margin-left: 10px;
+    width: 40px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
   }
 }
 .btn-theme {
@@ -35,12 +74,24 @@ a:hover {
   border-color: $primary;
   border-radius: 0;
   color: $primary;
+  .arrow {
+    background-image: url("../images/svg/button-arrow-theme.svg");
+  }
+  &:hover {
+    .arrow {
+      background-image: url("../images/svg/button-arrow-white.svg");
+    }
+  }
 }
 .btn-theme-fill {
   background-color: $primary;
   border-radius: 0;
   color: white;
+  .arrow {
+    background-image: url("../images/svg/button-arrow-white.svg");
+  }
 }
+/* 全域按鈕 */
 
 header {
   width: 100%;

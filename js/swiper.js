@@ -43,9 +43,9 @@ var mySwiper = new Swiper('#star-carousel', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 40,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+  navigation: {
+    nextEl: '#star-carousel #next',
+    prevEl: '#star-carousel #prev',
   },
   breakpoints: {
     996: {
@@ -54,6 +54,23 @@ var mySwiper = new Swiper('#star-carousel', {
     768: {
       spaceBetween: 10,
       slidesPerView: 1,
+    }
+  }
+});
+
+/* 首頁-六王  #king-carousel*/
+var mySwiper = new Swiper('#king-carousel', {
+  //allowTouchMove: false,
+  spaceBetween: 40,
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  breakpoints: {
+    996: {
+      spaceBetween: 20,
+      loop: true,
+      allowTouchMove: true,
+      slidesPerView: 1,
+      slidesPerColumn: 1,
     }
   }
 });
