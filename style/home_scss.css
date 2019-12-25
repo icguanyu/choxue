@@ -1275,12 +1275,6 @@
   color: #e94f1b;
 }
 
-#pictures .waterfall {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 #pictures .waterfall .item {
   width: 33.33%;
   padding: 15px;

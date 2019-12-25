@@ -1183,10 +1183,13 @@
 <script>
   /* 瀑布流 isotope init*/
   (function () {
-    $('.waterfall').masonry({
-      itemSelector: '.item',
-      columnWidth: '.item'
-    });
+    /* 確保 dom 載入完畢後再初始化 masonry 否則初次載入會跑版*/
+    window.onload = function () {
+      $('.waterfall').masonry({
+        itemSelector: '.item',
+        columnWidth: '.item'
+      });
+    };
   })()
 </script>
 
