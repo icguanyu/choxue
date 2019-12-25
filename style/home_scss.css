@@ -1275,6 +1275,12 @@
   color: #e94f1b;
 }
 
+#pictures .waterfall {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 #pictures .waterfall .item {
   width: 33.33%;
   padding: 15px;
@@ -1469,10 +1475,6 @@
 
 #video .header .title {
   color: #e94f1b;
-}
-
-#video #video-carousel {
-  padding: 0 50px;
 }
 
 #video #video-carousel .swiper-slide .video {

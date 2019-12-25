@@ -1173,7 +1173,7 @@
 </body>
 <!-- lib -->
 <script src="lib/js/jquery-3.3.1.js"></script>
-<script src="lib/js/isotope.pkgd.min.js"></script>
+<script src="lib/js/masonry.pkgd.min.js"></script>
 <script src="lib/js/bootstrap-4.1.0.min.js"></script>
 <script src='lib/js/swiper.min.js'></script>
 <!-- init -->
@@ -1183,12 +1183,9 @@
 <script>
   /* 瀑布流 isotope init*/
   (function () {
-    $('.waterfall').isotope({
+    $('.waterfall').masonry({
       itemSelector: '.item',
-      masonry: {
-        percentPosition: true,
-        columnWidth: '.item',
-      }
+      columnWidth: '.item'
     });
   })()
 </script>

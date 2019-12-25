@@ -349,12 +349,11 @@ header {
 
 /* Footer */
 footer {
-  padding: 20px;
   background: black;
 }
 
 footer .logo {
-  margin: 20px 0;
+  margin: 50px 0;
 }
 
 footer .logo img {
@@ -386,6 +385,7 @@ footer .partner img {
 footer .copyright {
   font-size: 12px;
   color: #707070;
+  margin: 20px 0;
 }
 
 footer h6 {

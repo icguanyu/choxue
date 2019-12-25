@@ -991,6 +991,7 @@
     }
   }
   .waterfall {
+    height: fit-content;
     .item {
       width: 33.33%;
       padding: 15px;
@@ -1146,7 +1147,7 @@
     }
   }
   #video-carousel {
-    padding: 0 50px;
+    // padding: 0 50px;
     .swiper-slide {
       .video {
         width: 100%;
