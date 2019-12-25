@@ -1024,6 +1024,78 @@
       }
     }
   }
+  .modal-dialog {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    .modal-content {
+      background: none;
+      border-radius: 0;
+      width: 600px;
+      .modal-body {
+        padding: 0;
+        position: relative;
+        .close {
+          right: 0px;
+          top: 0;
+          position: absolute;
+          z-index: 99;
+          width: 40px;
+          height: 40px;
+          background: black;
+          &:after,
+          &:before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            height: 1px;
+            background: white;
+            top: 50%;
+            z-index: 99;
+          }
+          &::after {
+            transform: rotate(45deg);
+          }
+          &::before {
+            transform: rotate(-45deg);
+          }
+        }
+        #model-carousel {
+          position: relative;
+          .swiper-slide {
+            position: relative;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+            .bottom {
+              color: white;
+              width: 100%;
+              background: black;
+              position: absolute;
+              padding: 10px;
+              left: 0;
+              bottom: 0;
+            }
+          }
+        }
+        .btns {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .navigation {
+          width: 110%;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 996px) {
   #pictures {
@@ -1043,5 +1115,21 @@
         padding: 0 10px 10px 0;
       }
     }
+    
+  .modal-dialog {
+    .modal-content {
+      width: 90%;
+      .modal-body {
+        .close {
+          width: 30px;
+          height: 30px;
+        }
+        
+      }
+    }
+  }
   }
 }
+
+/* 頁底 Footer*/
+/* 因全域使用,放置於 layout.scss*/

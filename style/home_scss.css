@@ -1315,6 +1315,105 @@
   bottom: 0;
 }
 
+#pictures .modal-dialog {
+  max-width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pictures .modal-dialog .modal-content {
+  background: none;
+  border-radius: 0;
+  width: 600px;
+}
+
+#pictures .modal-dialog .modal-content .modal-body {
+  padding: 0;
+  position: relative;
+}
+
+#pictures .modal-dialog .modal-content .modal-body .close {
+  right: 0px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background: black;
+}
+
+#pictures .modal-dialog .modal-content .modal-body .close:after, #pictures .modal-dialog .modal-content .modal-body .close:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background: white;
+  top: 50%;
+  z-index: 99;
+}
+
+#pictures .modal-dialog .modal-content .modal-body .close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#pictures .modal-dialog .modal-content .modal-body .close::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#pictures .modal-dialog .modal-content .modal-body #model-carousel {
+  position: relative;
+}
+
+#pictures .modal-dialog .modal-content .modal-body #model-carousel .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+#pictures .modal-dialog .modal-content .modal-body #model-carousel .swiper-slide img {
+  width: 100%;
+}
+
+#pictures .modal-dialog .modal-content .modal-body #model-carousel .swiper-slide .bottom {
+  color: white;
+  width: 100%;
+  background: black;
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+}
+
+#pictures .modal-dialog .modal-content .modal-body .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#pictures .modal-dialog .modal-content .modal-body .navigation {
+  width: 110%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
 @media (max-width: 996px) {
   #pictures {
     width: 95%;
@@ -1338,4 +1437,14 @@
     width: 50%;
     padding: 0 10px 10px 0;
   }
+  #pictures .modal-dialog .modal-content {
+    width: 90%;
+  }
+  #pictures .modal-dialog .modal-content .modal-body .close {
+    width: 30px;
+    height: 30px;
+  }
 }
+
+/* 頁底 Footer*/
+/* 因全域使用,放置於 layout.scss*/

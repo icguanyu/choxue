@@ -62,7 +62,7 @@ a:hover {
 }
 
 /* 白色小箭頭 */
-/* 全域按鈕 */
+/* 按鈕 */
 .btn {
   font-weight: normal;
   letter-spacing: 2px;
@@ -110,7 +110,7 @@ a:hover {
   background-image: url("../images/svg/button-arrow-white.svg");
 }
 
-/* 全域按鈕 */
+/* Menu*/
 header {
   width: 100%;
   background: #000;
@@ -332,5 +332,92 @@ header {
   }
   .menu .hamburger {
     display: block;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: black;
+}
+
+footer .logo {
+  margin: 20px 0;
+}
+
+footer .logo img {
+  width: 200px;
+}
+
+footer .contact p {
+  color: #ccc;
+}
+
+footer .follow-us a {
+  margin-right: 20px;
+}
+
+footer .partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+footer .partner img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  color: #707070;
+}
+
+footer h6 {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer ul li {
+  width: 50%;
+  font-weight: normal;
+  padding: 5px 0;
+}
+
+footer ul li a {
+  color: #ccc;
+}
+
+@media (max-width: 992px) {
+  footer {
+    padding: 0 15px;
+  }
+  footer .col-12 {
+    margin-bottom: 25px;
+  }
+  footer .partner {
+    margin: 10px 0;
+  }
+  footer .partner img {
+    height: 70px;
+  }
+  footer h6 {
+    margin-bottom: 8px;
+  }
+  footer ul {
+    width: 50%;
   }
 }

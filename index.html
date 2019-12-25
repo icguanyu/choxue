@@ -989,12 +989,6 @@
       </div>
       <div class="item" data-toggle="modal" data-target="#exampleModal">
         <div class="content">
-          <img src="images/demo/pic-4.png">
-          <div class="bottom">比賽實況</div>
-        </div>
-      </div>
-      <div class="item" data-toggle="modal" data-target="#exampleModal">
-        <div class="content">
           <img src="images/demo/pic-5.png">
           <div class="bottom">比賽實況</div>
         </div>
@@ -1017,12 +1011,6 @@
           <div class="bottom">比賽實況</div>
         </div>
       </div>
-      <div class="item" data-toggle="modal" data-target="#exampleModal">
-        <div class="content">
-          <img src="images/demo/pic-4.png">
-          <div class="bottom">比賽實況</div>
-        </div>
-      </div>
     </div>
     <!-- 照片 Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -1030,122 +1018,114 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <div class="close" data-dismiss="modal" aria-label="Close"></div>
+            <!-- swiper -->
+            <div class="swiper-container" id="model-carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/demo/pic-1.png" alt="">
+                  <div class="bottom">武陵高中對上北科附工比賽實況</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/demo/pic-2.png" alt="">
+                  <div class="bottom">武陵高中對上北科附工比賽實況</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/demo/pic-3.png" alt="">
+                  <div class="bottom">武陵高中對上北科附工比賽實況</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="btns">
+              <button class="btn btn-theme-fill">更多照片<div class="arrow"></button>
+              <button class="btn btn-theme-fill">比賽統計<div class="arrow"></button>
+            </div>
+            <div class="navigation">
+              <div class="arrow-prev"></div>
+              <div class="arrow-next"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
+  <!-- Footer -->
   <footer>
-    <div class="container py-5">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="img-fluid" src="images/logo/1x.png" srcset="images/logo/1x.png 1x, images/logo/2x.png 2x" />
+        <div class="col-12 col-md-6 logo">
+          <img src="images/logo/2x.png" />
         </div>
       </div>
-      <br />
       <div class="row">
-        <div class="col-6 col-md-auto">
-          <p class="font-weight-bold">球學聯盟</p>
-          <div class="row">
-            <div class="col-6">
-              <ul class="list-group">
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>首頁</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p style="word-break: keep-all;">最新消息</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>賽程</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>排行</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>隊伍</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-6">
-              <ul class="list-group">
-                <li class="list-inline-item">
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>教練</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>球員</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>數據</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>關於</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div class="col-12 col-md-2">
+          <h6>球學聯盟</h6>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="schedule.html">賽程</a></li>
+            <li><a href="rank.html">排行</a></li>
+            <li><a href="team.html">隊伍</a></li>
+            <li><a href="coach.html">教練</a></li>
+            <li><a href="player.html">球員</a></li>
+            <li><a href="statistic.html">數據</a></li>
+            <li><a href="about.html">關於</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6>聯絡我們</h6>
+          <div class="contact">
+            <p>CHOXUE LEAGUE</p>
+            <p>球學股份有限公司</p>
+            <p>tel-+886223613639</p>
+            <p>email-service@choxue.com</p>
           </div>
         </div>
-        <div class="col-12 col-md-auto">
-          <p>CHOXUE LEAGUE</p>
-          <p>球學股份有限公司</p>
-          <p>tel-+886223613639</p>
-          <p>email-service@choxue.com</p>
-        </div>
-        <div class="col-12 col-md-auto">
-          <div class="row">
-            <div class="col-auto col-md-12">
-              <span class="font-weight-bold">關注我們</span>
-            </div>
-            <div class="col-auto col-md-12">
+        <div class="col-12 col-md-3">
+          <h6>關注我們</h6>
+          <div class="follow-us">
+            <a href="#"><img src="images/svg/Icon-yt.svg" alt=""></a>
+            <a href="#"><img src="images/svg/Icon-Ig.svg" alt=""></a>
+            <a href="#"><img src="images/svg/Icon-Fb.svg" alt=""></a>
+          </div>
 
-              <i class="fab fa-youtube"></i>
-              <span>&nbsp;&nbsp;</span>
-              <i class="fab fa-instagram"></i>
-              <span>&nbsp;&nbsp;</span>
-              <i class="fab fa-facebook-f"></i>
-            </div>
-          </div>
         </div>
-        <div class="col-12 col-md-auto">
-          <a href="" class="link-unstyled">
-            <span class="font-weight-bold">加入我們</span>
-          </a>
+        <div class="col-12 col-md-3">
+          <h6>加入我們</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="partner">
+            <img src="https://fakeimg.pl/100x70/">
+            <img src="https://fakeimg.pl/150x50/">
+            <img src="https://fakeimg.pl/120x70/">
+            <img src="https://fakeimg.pl/150x70/">
+            <img src="https://fakeimg.pl/160x70/">
+            <img src="https://fakeimg.pl/80x70/">
+            <img src="https://fakeimg.pl/100x100/">
+            <img src="https://fakeimg.pl/110x70/">
+            <img src="https://fakeimg.pl/80x80/">
+            <img src="https://fakeimg.pl/150x50/">
+            <img src="https://fakeimg.pl/100x90/">
+            <img src="https://fakeimg.pl/150x70/">
+          </div>
 
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-md-6">
-          <span>Copyright © 2019 球學股份有限公司 Incorporated.</span>
-          <br />
-          <span>All rights reserved. Power by HOT籃球熱</span>
+          <div class="copyright">
+            <p>Copyright © 2019 球學股份有限公司 Incorporated.</p>
+            <p>All rights reserved. Power by HOT籃球熱</p>
+          </div>
+
         </div>
       </div>
     </div>
   </footer>
 </body>
+
 <script src="lib/js/jquery-3.3.1.js"></script>
 <script src="lib/js/bootstrap-4.1.0.min.js"></script>
 <script src="lib/js/isotope.pkgd.min.js"></script>
