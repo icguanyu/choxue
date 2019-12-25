@@ -1146,7 +1146,6 @@
     }
   }
   #video-carousel {
-    // padding: 0 50px;
     .swiper-slide {
       .video {
         width: 100%;
@@ -1196,11 +1195,12 @@
   #video {
     width: 95%;
     #video-carousel {
+      padding: 0 30px;
       .swiper-slide {
         .video {
           height: 300px;
         }
-        .bottom{
+        .bottom {
           padding: 20px 10px;
         }
       }

@@ -1526,6 +1526,9 @@
   #video {
     width: 95%;
   }
+  #video #video-carousel {
+    padding: 0 30px;
+  }
   #video #video-carousel .swiper-slide .video {
     height: 300px;
   }

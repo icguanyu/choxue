@@ -117,6 +117,7 @@ by Nick 2019-12
         slidesPerView: 2,
       },
       768: {
+        spaceBetween: 60,
         slidesPerView: 1,
       }
     }
