@@ -846,6 +846,7 @@
                 }
               }
               .player-name {
+                font-weight: 700;
                 font-size: 1.5rem;
               }
               .detail {
@@ -1115,21 +1116,96 @@
         padding: 0 10px 10px 0;
       }
     }
-    
-  .modal-dialog {
-    .modal-content {
-      width: 90%;
-      .modal-body {
-        .close {
-          width: 30px;
-          height: 30px;
+
+    .modal-dialog {
+      .modal-content {
+        width: 90%;
+        .modal-body {
+          .close {
+            width: 30px;
+            height: 30px;
+          }
         }
-        
       }
     }
   }
-  }
 }
 
+#video {
+  max-width: 100%;
+  width: 1140px;
+  margin: auto;
+  margin-bottom: 60px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    .title {
+      color: $primary;
+    }
+  }
+  #video-carousel {
+    padding: 0 50px;
+    .swiper-slide {
+      .video {
+        width: 100%;
+        height: 200px;
+        iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+      .bottom {
+        padding: 10px;
+        background: $primary;
+        color: white;
+        .video-title {
+          font-size: 1.2rem;
+        }
+        .date {
+          font-size: 12px;
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      background-position: center center;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+    }
+    .swiper-button-prev {
+      left: 0;
+      transform: rotateZ(180deg);
+      background-image: url("../images/svg/rignt-arrow.svg");
+    }
+    .swiper-button-next {
+      right: 0;
+      background-image: url("../images/svg/rignt-arrow.svg");
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      content: "";
+    }
+  }
+}
+@media (max-width: 996px) {
+  #video {
+    width: 95%;
+    #video-carousel {
+      .swiper-slide {
+        .video {
+          height: 300px;
+        }
+        .bottom{
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+}
 /* 頁底 Footer*/
 /* 因全域使用,放置於 layout.scss*/

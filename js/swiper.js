@@ -41,7 +41,7 @@ by Nick 2019-12
 
   /* 首頁-點球星 star-rank-wrapper #star-carousel*/
   var mySwiper = new Swiper('#star-carousel', {
-    loop: true,
+    
     slidesPerView: 3,
     spaceBetween: 40,
     navigation: {
@@ -101,5 +101,24 @@ by Nick 2019-12
       nextEl: '.modal-body .arrow-next',
       prevEl: '.modal-body .arrow-prev',
     },
+  });
+
+  /* model 內 model-carousel*/
+  var mySwiper = new Swiper('#video-carousel', {
+    
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '#video-carousel .swiper-button-next',
+      prevEl: '#video-carousel .swiper-button-prev',
+    }, 
+    breakpoints: {
+      996: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 1,
+      }
+    }
   });
 })()

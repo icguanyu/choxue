@@ -5,19 +5,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Index </title>
+  <title>首頁</title>
   <link rel="stylesheet" href="lib/css/bootstrap-4.1.0.min.css">
-  <!-- <link rel="stylesheet" href="style/bootstrap-extension.css"> -->
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/home.css">
-  <!-- <link rel="stylesheet" type="text/css" href="lib/css/slick.css" />
-  <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css" /> -->
-
   <!-- swiper 4.5.1 -->
   <link rel="stylesheet" type="text/css" href="lib/css/swiper.min.css" />
   <link rel="stylesheet" href="style/layout.css">
   <link rel="stylesheet" href="style/home_scss.css">
-
 </head>
 
 <body>
@@ -1050,6 +1043,59 @@
       </div>
     </div>
   </div>
+  <!-- 影片　#video-->
+  <div id="video">
+    <div class="header">
+      <div class="title">影片</div>
+      <button class="btn btn-theme">比賽影片<div class="arrow"></button>
+    </div>
+    <div class="swiper-container" id="video-carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MJ11S2iaZoE"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WBOQqdValS8"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jCHm2KZsbGQ"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jCHm2KZsbGQ"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -1125,23 +1171,26 @@
     </div>
   </footer>
 </body>
-
+<!-- lib -->
 <script src="lib/js/jquery-3.3.1.js"></script>
-<script src="lib/js/bootstrap-4.1.0.min.js"></script>
 <script src="lib/js/isotope.pkgd.min.js"></script>
+<script src="lib/js/bootstrap-4.1.0.min.js"></script>
 <script src='lib/js/swiper.min.js'></script>
-
+<!-- init -->
 <script src="js/layout.js"></script>
 <script src="js/swiper.js"></script>
 
 <script>
-  $('.waterfall').isotope({
-    itemSelector: '.item',
-    masonry: {
-      percentPosition: true,
-      columnWidth: '.item',
-    }
-  });
+  /* 瀑布流 isotope init*/
+  (function () {
+    $('.waterfall').isotope({
+      itemSelector: '.item',
+      masonry: {
+        percentPosition: true,
+        columnWidth: '.item',
+      }
+    });
+  })()
 </script>
 
 </html>

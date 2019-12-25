@@ -1108,6 +1108,7 @@
 }
 
 #rank-wrapper .wrap .cotent #king-carousel .swiper-slide .profile .right .player-name {
+  font-weight: 700;
   font-size: 1.5rem;
 }
 
@@ -1443,6 +1444,97 @@
   #pictures .modal-dialog .modal-content .modal-body .close {
     width: 30px;
     height: 30px;
+  }
+}
+
+#video {
+  max-width: 100%;
+  width: 1140px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+#video .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 0;
+}
+
+#video .header .title {
+  color: #e94f1b;
+}
+
+#video #video-carousel {
+  padding: 0 50px;
+}
+
+#video #video-carousel .swiper-slide .video {
+  width: 100%;
+  height: 200px;
+}
+
+#video #video-carousel .swiper-slide .video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#video #video-carousel .swiper-slide .bottom {
+  padding: 10px;
+  background: #e94f1b;
+  color: white;
+}
+
+#video #video-carousel .swiper-slide .bottom .video-title {
+  font-size: 1.2rem;
+}
+
+#video #video-carousel .swiper-slide .bottom .date {
+  font-size: 12px;
+}
+
+#video #video-carousel .swiper-button-next,
+#video #video-carousel .swiper-button-prev {
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+#video #video-carousel .swiper-button-prev {
+  left: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  background-image: url("../images/svg/rignt-arrow.svg");
+}
+
+#video #video-carousel .swiper-button-next {
+  right: 0;
+  background-image: url("../images/svg/rignt-arrow.svg");
+}
+
+#video #video-carousel .swiper-button-next::after,
+#video #video-carousel .swiper-button-prev::after {
+  content: "";
+}
+
+@media (max-width: 996px) {
+  #video {
+    width: 95%;
+  }
+  #video #video-carousel .swiper-slide .video {
+    height: 300px;
+  }
+  #video #video-carousel .swiper-slide .bottom {
+    padding: 20px 10px;
   }
 }
 
