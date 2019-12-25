@@ -29,62 +29,101 @@
   <script type="text/javascript" src="lib/js/kendo.timezones.min.js"></script>
   <script type="text/javascript" src="lib/js/kendo.mobile.min.js"></script>
   <!-- kendo end -->
+  <link rel="stylesheet" href="style/layout.css">
 </head>
 
 <body>
-  <header id="nav-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black px-5 fixed-top">
-      <a class="navbar-brand font-weight-bold" href="index.html">
-        <img class="img-fluid" src="images/logo/1x.png" srcset="images/logo/1x.png 1x, images/logo/2x.png 2x" />
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="top-nav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="top-nav">
-        <ul class="navbar-nav ml-auto mr-5">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">首頁</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="schedule.html">賽程</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="rank.html">排行</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="team.html">隊伍</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="coach.html">教練</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="player.html">球員</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="statistic.html">數據</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="about.html">關於</a>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav">
-          <li class="">
-            <a class="nav-link d-inline px-0" href="#"><i class="fab fa-youtube nav-icon"></i></a>
-            <!-- </li> -->
-            <!-- <li class="nav-icon"> -->
-            <a class="nav-link d-inline px-0" href="#"><i class="fab fa-instagram nav-icon"></i></a>
-            <!-- </li> -->
-            <!-- <li class="nav-icon"> -->
-            <a class="nav-link d-inline px-0" href="#"><i class="fab fa-facebook-f nav-icon"></i></a>
-          </li>
-        </ul>
+  <!-- Header Menu (moblie menu) -->
+  <header>
+    <div class="menu">
+      <div class="logo">
+        <a href="index.html">
+          <img class="img-fluid" src="images/logo/1x.png" srcset="images/logo/1x.png 1x, images/logo/2x.png 2x" />
+        </a>
       </div>
-    </nav>
-
+      <nav>
+        <ul class="menu-pc">
+          <li class="active">
+            <a href="index.html">首頁</a>
+          </li>
+          <li>
+            <a href="schedule.html">賽程</a>
+          </li>
+          <li>
+            <a href="rank.html">排行</a>
+          </li>
+          <li>
+            <a href="team.html">隊伍</a>
+          </li>
+          <li>
+            <a href="coach.html">教練</a>
+          </li>
+          <li>
+            <a href="player.html">球員</a>
+          </li>
+          <li>
+            <a href="statistic.html">數據</a>
+          </li>
+          <li>
+            <a href="about.html">關於</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="#"><img src="images/svg/Icon-yt.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/svg/Icon-Ig.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/svg/Icon-Fb.svg" alt=""></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile_menu">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img class="img-fluid" src="images/logo/1x.png" srcset="images/logo/1x.png 1x, images/logo/2x.png 2x" />
+          </a>
+        </div>
+        <ul>
+          <li class="active">
+            <a href="index.html">首頁</a>
+          </li>
+          <li>
+            <a href="schedule.html">賽程</a>
+          </li>
+          <li>
+            <a href="rank.html">排行</a>
+          </li>
+          <li>
+            <a href="team.html">隊伍</a>
+          </li>
+          <li>
+            <a href="coach.html">教練</a>
+          </li>
+          <li>
+            <a href="player.html">球員</a>
+          </li>
+          <li>
+            <a href="statistic.html">數據</a>
+          </li>
+          <li>
+            <a href="about.html">關於</a>
+          </li>
+          <li class="social">
+            <a href="#"><img src="images/svg/Icon-yt.svg" alt=""></a>
+            <a href="#"><img src="images/svg/Icon-Ig.svg" alt=""></a>
+            <a href="#"><img src="images/svg/Icon-Fb.svg" alt=""></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <div id="nav-space"></div>
@@ -1708,113 +1747,83 @@
     </div>
   </div>
   </div>
-
+  <!-- Footer -->
   <footer>
-    <div class="container py-5">
+    <div class="container">
       <div class="row">
-
-        <div class="col-12 col-md-6">
-          <img class="img-fluid" src="images/logo/1x.png" srcset="images/logo/1x.png 1x, images/logo/2x.png 2x" />
-
-        </div>
-        <div class="col-12 col-md-6">
-          <span>Copyright © 2019 球學股份有限公司 Incorporated.</span>
-          <br />
-          <span>All rights reserved. Power by HOT籃球熱</span>
+        <div class="col-12 col-md-6 logo">
+          <img src="images/logo/2x.png" />
         </div>
       </div>
-      <br />
       <div class="row">
-        <div class="col-6 col-md-auto">
-          <p class="font-weight-bold">球學聯盟</p>
-          <div class="row">
-            <div class="col-6">
-              <ul class="list-group">
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>首頁</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p style="word-break: keep-all;">最新消息</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>賽程</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>排行</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>隊伍</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-6">
-              <ul class="list-group">
-                <li class="list-inline-item">
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>教練</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>球員</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>數據</p>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="text-white">
-                    <p>關於</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div class="col-12 col-md-2">
+          <h6>球學聯盟</h6>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="schedule.html">賽程</a></li>
+            <li><a href="rank.html">排行</a></li>
+            <li><a href="team.html">隊伍</a></li>
+            <li><a href="coach.html">教練</a></li>
+            <li><a href="player.html">球員</a></li>
+            <li><a href="statistic.html">數據</a></li>
+            <li><a href="about.html">關於</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6>聯絡我們</h6>
+          <div class="contact">
+            <p>CHOXUE LEAGUE</p>
+            <p>球學股份有限公司</p>
+            <p>tel-+886223613639</p>
+            <p>email-service@choxue.com</p>
           </div>
         </div>
-        <div class="col-12 col-md-auto">
-          <p>CHOXUE LEAGUE</p>
-          <p>球學股份有限公司</p>
-          <p>tel-+886223613639</p>
-          <p>email-service@choxue.com</p>
-        </div>
-        <div class="col-12 col-md-auto">
-          <div class="row">
-            <div class="col-auto col-md-12">
-              <span class="font-weight-bold">關注我們</span>
-            </div>
-            <div class="col-auto col-md-12">
+        <div class="col-12 col-md-3">
+          <h6>關注我們</h6>
+          <div class="follow-us">
+            <a href="#"><img src="images/svg/Icon-yt.svg" alt=""></a>
+            <a href="#"><img src="images/svg/Icon-Ig.svg" alt=""></a>
+            <a href="#"><img src="images/svg/Icon-Fb.svg" alt=""></a>
+          </div>
 
-              <i class="fab fa-youtube"></i>
-              <span>&nbsp;&nbsp;</span>
-              <i class="fab fa-instagram"></i>
-              <span>&nbsp;&nbsp;</span>
-              <i class="fab fa-facebook-f"></i>
-            </div>
-          </div>
         </div>
-        <div class="col-12 col-md-auto">
-          <a href="" class="link-unstyled">
-            <span class="font-weight-bold">加入我們</span>
-          </a>
+        <div class="col-12 col-md-3">
+          <h6>加入我們</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="partner">
+            <img src="https://fakeimg.pl/100x70/">
+            <img src="https://fakeimg.pl/150x50/">
+            <img src="https://fakeimg.pl/120x70/">
+            <img src="https://fakeimg.pl/150x70/">
+            <img src="https://fakeimg.pl/160x70/">
+            <img src="https://fakeimg.pl/80x70/">
+            <img src="https://fakeimg.pl/100x100/">
+            <img src="https://fakeimg.pl/110x70/">
+            <img src="https://fakeimg.pl/80x80/">
+            <img src="https://fakeimg.pl/150x50/">
+            <img src="https://fakeimg.pl/100x90/">
+            <img src="https://fakeimg.pl/150x70/">
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="copyright">
+            <p>Copyright © 2019 球學股份有限公司 Incorporated.</p>
+            <p>All rights reserved. Power by HOT籃球熱</p>
+          </div>
 
         </div>
       </div>
     </div>
   </footer>
 </body>
+<!-- init -->
+<script src="js/layout.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/play-by-play.js"></script>
 <script type="text/javascript" src="lib/js/slick.min.js"></script>
