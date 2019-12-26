@@ -279,12 +279,12 @@
   left: 0;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
-  background-image: url("../images/svg/rignt-arrow.svg");
+  background-image: url("../images/svg/right-arrow.svg");
 }
 
 #live-game .swiper-button-next {
   right: 0;
-  background-image: url("../images/svg/rignt-arrow.svg");
+  background-image: url("../images/svg/right-arrow.svg");
 }
 
 #live-game .swiper-button-next::after,
@@ -1328,6 +1328,7 @@
 
 #pictures .modal-dialog .modal-content {
   background: none;
+  border: none;
   border-radius: 0;
   width: 600px;
 }
@@ -1509,12 +1510,12 @@
   left: 0;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
-  background-image: url("../images/svg/rignt-arrow.svg");
+  background-image: url("../images/svg/right-arrow.svg");
 }
 
 #video #video-carousel .swiper-button-next {
   right: 0;
-  background-image: url("../images/svg/rignt-arrow.svg");
+  background-image: url("../images/svg/right-arrow.svg");
 }
 
 #video #video-carousel .swiper-button-next::after,

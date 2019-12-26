@@ -68,9 +68,15 @@ table th {
           transform: rotate(45deg);
 }
 
-/* 白色小箭頭 */
+/*Tabel*/
+.table thead th {
+  border: none;
+}
+
 /* 按鈕 */
-.btn {
+.button {
+  cursor: pointer;
+  border: 1px solid;
   font-weight: normal;
   letter-spacing: 2px;
   padding: 10px 15px;
@@ -83,7 +89,7 @@ table th {
           align-items: center;
 }
 
-.btn .arrow {
+.button .arrow {
   margin-left: 10px;
   width: 40px;
   height: 15px;
@@ -92,33 +98,34 @@ table th {
   background-position: center center;
 }
 
-.btn:hover {
+.button:hover {
   color: white;
   background: #e94f1b;
 }
 
-.btn-theme {
+.button-theme {
   background-color: transparent;
   border-color: #e94f1b;
   border-radius: 0;
   color: #e94f1b;
 }
 
-.btn-theme .arrow {
+.button-theme .arrow {
   background-image: url("../images/svg/button-arrow-theme.svg");
 }
 
-.btn-theme:hover .arrow {
+.button-theme:hover .arrow {
   background-image: url("../images/svg/button-arrow-white.svg");
 }
 
-.btn-theme-fill {
+.button-theme-fill {
+  border: none;
   background-color: #e94f1b;
   border-radius: 0;
   color: white;
 }
 
-.btn-theme-fill .arrow {
+.button-theme-fill .arrow {
   background-image: url("../images/svg/button-arrow-white.svg");
 }
 
@@ -350,6 +357,17 @@ header {
 /* Footer */
 footer {
   background: black;
+  position: relative;
+}
+
+footer:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 60%;
+  width: 15px;
+  background: #e94f1b;
 }
 
 footer .logo {
@@ -417,6 +435,9 @@ footer ul li a {
 @media (max-width: 992px) {
   footer {
     padding: 0 15px;
+  }
+  footer:after {
+    display: none;
   }
   footer .col-12 {
     margin-bottom: 25px;

@@ -211,11 +211,11 @@
   .swiper-button-prev {
     left: 0;
     transform: rotateZ(180deg);
-    background-image: url("../images/svg/rignt-arrow.svg");
+    background-image: url("../images/svg/right-arrow.svg");
   }
   .swiper-button-next {
     right: 0;
-    background-image: url("../images/svg/rignt-arrow.svg");
+    background-image: url("../images/svg/right-arrow.svg");
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
@@ -1031,6 +1031,7 @@
     align-items: center;
     .modal-content {
       background: none;
+      border: none;
       border-radius: 0;
       width: 600px;
       .modal-body {
@@ -1179,11 +1180,11 @@
     .swiper-button-prev {
       left: 0;
       transform: rotateZ(180deg);
-      background-image: url("../images/svg/rignt-arrow.svg");
+      background-image: url("../images/svg/right-arrow.svg");
     }
     .swiper-button-next {
       right: 0;
-      background-image: url("../images/svg/rignt-arrow.svg");
+      background-image: url("../images/svg/right-arrow.svg");
     }
     .swiper-button-next::after,
     .swiper-button-prev::after {

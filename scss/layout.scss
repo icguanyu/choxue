@@ -59,10 +59,15 @@ table {
   transform: rotate(45deg);
 }
 
-/* 白色小箭頭 */
+/*Tabel*/
+.table thead th{
+  border: none  ;
+}
 
 /* 按鈕 */
-.btn {
+.button {
+  cursor: pointer;
+  border: 1px solid;
   font-weight: normal;
   letter-spacing: 2px;
   padding: 10px 15px;
@@ -82,7 +87,7 @@ table {
     background: $primary;
   }
 }
-.btn-theme {
+.button-theme {
   background-color: transparent;
   border-color: $primary;
   border-radius: 0;
@@ -96,7 +101,8 @@ table {
     }
   }
 }
-.btn-theme-fill {
+.button-theme-fill {
+  border: none  ;
   background-color: $primary;
   border-radius: 0;
   color: white;
@@ -284,6 +290,16 @@ header {
 /* Footer */
 footer {
   background: black;
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 60%;
+    width: 15px;
+    background: $primary;
+  }
   .logo {
     margin: 50px 0;
     img {
@@ -337,6 +353,9 @@ footer {
 @media (max-width: 992px) {
   footer {
     padding: 0 15px;
+    &:after{
+      display: none;
+    }
     .col-12 {
       margin-bottom: 25px;
     }
