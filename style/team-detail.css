@@ -12,6 +12,7 @@
     font-size: 14px; }
   .detail-statistic .value {
     margin-bottom: 0.5rem !important;
+    margin-bottom: 0rem !important;
     font-size: 16px;
     font-weight: bold; }
   @media (max-width: 992px) {
@@ -55,10 +56,10 @@
   #player-wrapper .player .player-role, #staff-wrapper .player .player-role {
     color: #e94f1b;
     position: absolute;
-    top: 5;
-    right: 5; }
+    top: 5px;
+    right: 5px; }
   #player-wrapper .player .player-squad-number, #staff-wrapper .player .player-squad-number {
     color: #e94f1b;
     position: absolute;
-    bottom: 5;
-    right: 5; }
+    bottom: 5px;
+    right: 5px; }

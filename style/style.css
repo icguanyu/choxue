@@ -100,14 +100,14 @@ footer {
     display: inline-block;
     height: 10px;
     width: 40px;
-    background: transparent url(../../img/button-arrow-theme.svg) no-repeat 0px 0px; }
+    background: transparent url('../images/svg/button-arrow-theme.svg') no-repeat 0px 0px; }
   .btn-theme i.btn-arrow.left:after {
     transform: scaleX(-1); }
   .btn-theme:hover {
     background-color: #e94f1b;
     color: white; }
     .btn-theme:hover i.btn-arrow:after {
-      background: transparent url(../../img/button-arrow-white.svg) no-repeat 0px 0px; }
+      background: transparent url('../images/svg/button-arrow-white.svg') no-repeat 0px 0px; }
 
 .btn-theme.active, .btn-theme-fill {
   background-color: #e94f1b;
