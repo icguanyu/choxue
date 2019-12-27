@@ -330,7 +330,7 @@ footer {
 @media (min-width: 992px) {
   .rwd-slick-prev {
     border: 1px solid #e94f1b !important;
-    background-image: url(../../img/arrow-left-theme.svg);
+    background-image: url('../images/svg/arrow-left-theme.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-origin: padding-box;
@@ -342,7 +342,7 @@ footer {
 @media (min-width: 992px) {
   .rwd-slick-next {
     border: 1px solid #e94f1b !important;
-    background-image: url(../../img/arrow-right-theme.svg);
+    background-image: url('../images/svg/arrow-right-theme.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-origin: padding-box;

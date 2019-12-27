@@ -13,11 +13,9 @@
   <link rel="stylesheet" href="style/play-by-play.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="lib/css/slick.css" />
-  <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css" />
-  <script type="text/javascript" src="lib/js/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="lib/js/bootstrap-4.1.0.min.js"></script>
-  
+
+  <!-- swiper 4.5.1 -->
+  <link rel="stylesheet" type="text/css" href="lib/css/swiper.min.css" />
   <link rel="stylesheet" href="style/layout.css">
 </head>
 
@@ -146,7 +144,7 @@
                 </div>
               </div>
 
-              <div class="team-icon-rwd">
+              <div class="team-icon-rwd-container">
                 <div class="flex-column justify-content-between">
                   <div>
                     <img class="img-fluid team-icon-2" src="images/demo/team-logo-3.png" />
@@ -166,12 +164,12 @@
         <div class="mb-2">
           <span class="h4 text-theme">經歷</span>
         </div>
-        <table class="table border-dark text-center table-tight th-dark">
+        <table class="table border-dark text-center th-dark">
           <thead>
             <tr>
               <th scope="col" rowspan="1">賽季</th>
               <th scope="col" rowspan="1">隊伍</th>
-              <th scope="col" rowspan="1">比賽場數</th>
+              <th scope="col" rowspan="1" class="matches">比賽場數</th>
               <th scope="col" rowspan="1">勝</th>
               <th scope="col" rowspan="1">敗</th>
             </tr>
@@ -180,21 +178,21 @@
             <tr>
               <td>2019</td>
               <td style="word-break: keep-all;">基隆商工</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>2019</td>
-              <td style="word-break: keep-all;">基隆商工</td>
-              <td>0</td>
+              <td class="matches">0</td>
               <td>0</td>
               <td>0</td>
             </tr>
             <tr>
               <td>2019</td>
               <td style="word-break: keep-all;">基隆商工</td>
+              <td class="matches">0</td>
               <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td style="word-break: keep-all;">基隆商工</td>
+              <td class="matches">0</td>
               <td>0</td>
               <td>0</td>
             </tr>
@@ -225,91 +223,157 @@
                 </div>
               </div>
             </div>
-
           </div>
-        </div>
-        <div class="row">
-          <div class="col text-left">
-            <span class="h3 text-theme">照片</span>
-          </div>
-          <div class="col text-right">
-            <button class="btn btn-theme">比賽照片 <i class="btn-arrow"></i></button>
-          </div>
-        </div>
-        <br />
-        <br />
-        <div class="card-columns photo-container">
-          <div class="card">
-            <button class="p-0 btn-unstyled photo" type="button" data-toggle="modal" data-target="#photo-modal">
-              <img class="card-img" src="images/demo/pic-1.png">
-              <div class="photo-overlay">
-                <div class="photo-overlay-bg">
-                  <span class="text-white">照片標題</span>
-                </div>
-              </div>
-            </button>
-          </div>
-          <div class="card">
-            <button class="p-0 btn-unstyled photo" type="button" data-toggle="modal" data-target="#photo-modal">
-              <img class="card-img" src="images/demo/pic-2.png">
-              <div class="photo-overlay">
-                <div class="photo-overlay-bg">
-                  <span class="text-white">照片標題</span>
-                </div>
-              </div>
-            </button>
-          </div>
-          <div class="card">
-            <button class="p-0 btn-unstyled photo" type="button" data-toggle="modal" data-target="#photo-modal">
-              <img class="card-img" src="images/demo/pic-3.png">
-              <div class="photo-overlay">
-                <div class="photo-overlay-bg">
-                  <span class="text-white">照片標題</span>
-                </div>
-              </div>
-            </button>
-          </div>
-          <div class="card">
-            <button class="p-0 btn-unstyled photo" type="button" data-toggle="modal" data-target="#photo-modal">
-              <img class="card-img" src="images/demo/pic-4.png">
-              <div class="photo-overlay">
-                <div class="photo-overlay-bg">
-                  <span class="text-white">照片標題</span>
-                </div>
-              </div>
-            </button>
-          </div>
-          <div class="card">
-            <button class="p-0 btn-unstyled photo" type="button" data-toggle="modal" data-target="#photo-modal">
-              <img class="card-img" src="images/demo/pic-5.png">
-              <div class="photo-overlay">
-                <div class="photo-overlay-bg">
-                  <span class="text-white">照片標題</span>
-                </div>
-              </div>
-            </button>
-          </div>
-
         </div>
       </div>
 
       <div class="divider-space-3"></div>
 
 
-      <div id="video-wrapper">
-        <div class="row">
-          <div class="col text-left">
-            <span class="h3 text-theme">影片</span>
-          </div>
-          <div class="col text-right">
-            <button class="btn btn-theme">更多 <i class="btn-arrow"></i></button>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
 
+  <!-- 照片 #pictures-->
+  <div id="pictures">
+    <div class="header">
+      <div class="title">照片</div>
+      <button class="button button-theme">比賽照片<div class="arrow"></button>
+    </div>
+    <div class="waterfall">
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-1.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-2.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-3.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-5.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-5.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-2.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+      <div class="item" data-toggle="modal" data-target="#exampleModal">
+        <div class="content">
+          <img src="images/demo/pic-3.png">
+          <div class="bottom">比賽實況</div>
+        </div>
+      </div>
+    </div>
+    <!-- 照片 Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="close" data-dismiss="modal" aria-label="Close"></div>
+            <!-- swiper -->
+            <div class="swiper-container" id="model-carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/demo/pic-1.png" alt="">
+                  <div class="bottom">武陵高中對上北科附工比賽實況</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/demo/pic-2.png" alt="">
+                  <div class="bottom">武陵高中對上北科附工比賽實況</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/demo/pic-3.png" alt="">
+                  <div class="bottom">武陵高中對上北科附工比賽實況</div>
+                </div>
+              </div>
+            </div>
+            <div class="btns">
+              <button class="button button-theme-fill">更多照片<div class="arrow"></button>
+              <button class="button button-theme-fill">比賽統計<div class="arrow"></button>
+            </div>
+            <div class="navigation">
+              <div class="arrow-prev"></div>
+              <div class="arrow-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 影片　#video-->
+  <div id="video">
+    <div class="header">
+      <div class="title">影片</div>
+      <button class="button button-theme">比賽影片<div class="arrow"></button>
+    </div>
+    <div class="swiper-container" id="video-carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MJ11S2iaZoE"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WBOQqdValS8"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jCHm2KZsbGQ"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="video">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jCHm2KZsbGQ"
+              allowfullscreen></iframe>
+          </div>
+          <div class="bottom">
+            <p class="video-title">聯盟背負「讓運動成為 教育的一環」之使命</p>
+            <p class="date">October 24, 2019</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -348,7 +412,7 @@
             <a href="#"><img src="images/svg/Icon-Ig.svg" alt=""></a>
             <a href="#"><img src="images/svg/Icon-Fb.svg" alt=""></a>
           </div>
-  
+
         </div>
         <div class="col-12 col-md-3">
           <h6>加入我們</h6>
@@ -370,7 +434,7 @@
             <img src="https://fakeimg.pl/100x90/">
             <img src="https://fakeimg.pl/150x70/">
           </div>
-  
+
         </div>
       </div>
       <div class="row">
@@ -379,16 +443,34 @@
             <p>Copyright © 2019 球學股份有限公司 Incorporated.</p>
             <p>All rights reserved. Power by HOT籃球熱</p>
           </div>
-  
+
         </div>
       </div>
     </div>
   </footer>
 </body>
+<!-- lib -->
+<script src="lib/js/jquery-3.3.1.js"></script>
+<script src="lib/js/masonry.pkgd.min.js"></script>
+<script src="lib/js/bootstrap-4.1.0.min.js"></script>
+<script src='lib/js/swiper.min.js'></script>
 <!-- init -->
 <script src="js/layout.js"></script>
+<script src="js/swiper.js"></script>
+
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/play-by-play.js"></script>
-<script type="text/javascript" src="lib/js/slick.min.js"></script>
+<script>
+  /* 瀑布流 isotope init*/
+  (function () {
+    /* 確保 dom 載入完畢後再初始化 masonry 否則初次載入會跑版*/
+    window.onload = function () {
+      $('.waterfall').masonry({
+        itemSelector: '.item',
+        columnWidth: '.item'
+      });
+    };
+  })()
+</script>
 
 </html>

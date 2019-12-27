@@ -1,9 +1,7 @@
-/* 控制DOM Layout相關之動畫 */
-; $(function () {
+;(function () {
   const $window = $(window)
   const $hamburger = $('.hamburger')
   const $mobile_menu = $('.mobile_menu')
-
 
   function toggleMobileMenu(e) {
     e.stopPropagation()
@@ -18,4 +16,4 @@
   $hamburger.click(toggleMobileMenu)
   $window.click(hideMobileMenu)
 
-})
+})()

@@ -5,13 +5,13 @@
   bottom: -80px;
   overflow: hidden;
   padding-right: 10vw !important;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
   .detail-statistic .key {
     margin-bottom: 0.5rem !important;
     font-size: 14px; }
   .detail-statistic .value {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0rem !important;
     font-size: 16px;
     font-weight: bold; }
   @media (max-width: 992px) {
