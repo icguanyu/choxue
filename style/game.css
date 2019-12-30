@@ -1,27 +1,190 @@
+@charset "UTF-8";
+/*原本的*/
 #top-region-wrapper {
-  position: relative; }
+  position: relative;
+}
+
+#top-region-wrapper .detail-statistic {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 992px) {
   #top-region-wrapper .detail-statistic {
-    padding-top: .5rem;
-    padding-bottom: .5rem; }
-    @media (min-width: 992px) {
-      #top-region-wrapper .detail-statistic {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-right: 100px;
-        padding-left: 15px;
-        position: absolute;
-        bottom: -3rem;
-        right: 0; } }
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 100px;
+    padding-left: 15px;
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+  }
+}
 
 .bg-midgrey {
-  background-color: #e3e3e3; }
+  background-color: #e3e3e3;
+}
 
 .nav-pills .nav-link {
   color: #9d9d9d;
   background-color: white;
   border-radius: 0;
-  border-bottom: 5px solid #d3d3d3; }
-  .nav-pills .nav-link.active {
-    color: #e94f1b;
-    background-color: white;
-    border-color: #e94f1b; }
+  border-bottom: 5px solid #d3d3d3;
+}
+
+.nav-pills .nav-link.active {
+  color: #e94f1b;
+  background-color: white;
+  border-color: #e94f1b;
+}
+
+/*原本的*/
+#event-tracking {
+  height: 320px;
+  padding: 10px;
+  background: white;
+}
+
+#event-tracking-part {
+  width: 100%;
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#event-tracking-part .left,
+#event-tracking-part .right {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px 0;
+}
+
+#event-tracking-part .left img,
+#event-tracking-part .right img {
+  width: 60px;
+  height: 60px;
+}
+
+#event-tracking-part .left:after,
+#event-tracking-part .right:after {
+  position: absolute;
+  content: '';
+  width: 300px;
+  height: 6px;
+  bottom: 0;
+}
+
+#event-tracking-part .left {
+  text-align: right;
+}
+
+#event-tracking-part .left:after {
+  left: 0;
+  background: blueviolet;
+}
+
+#event-tracking-part .right {
+  text-align: left;
+}
+
+#event-tracking-part .right:after {
+  right: 0;
+  background: #f3cd05;
+}
+
+#event-tracking-part .mid {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#event-tracking-part .mid > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px 0;
+}
+
+#event-tracking-part .mid > div p {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+#team-data {
+  width: 50% !important;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#team-data canvas {
+  background: white;
+}
+
+@media (max-width: 992px) {
+  #event-tracking-part {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #event-tracking-part .left,
+  #event-tracking-part .right {
+    padding: 10px 15px;
+  }
+  #event-tracking-part .left,
+  #event-tracking-part .right {
+    text-align: center;
+  }
+  #event-tracking-part .mid {
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    padding: 15px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #event-tracking-part .mid > div {
+    padding: 0px;
+  }
+  #event-tracking-part .mid > div p {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  #event-tracking-part .mid:before {
+    content: 'VS';
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #team-data {
+    width: 50% !important;
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}

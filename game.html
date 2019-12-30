@@ -29,6 +29,7 @@
   <script type="text/javascript" src="lib/js/kendo.mobile.min.js"></script>
   <!-- kendo end -->
   <link rel="stylesheet" href="style/layout.css">
+
 </head>
 
 <body>
@@ -177,9 +178,6 @@
     <div class="container">
       <div class="row text-center no-gutters">
         <div class="col-1 align-self-center">
-          <!-- <button class="btn btn-theme d-desktop">
-            <img src="images/svg/arrow-left-theme.svg" />
-          </button> -->
           <button class="btn btn-unstyled pr-0 ">
             <img src="images/svg/right-arrow.svg" style="transform: rotate(180deg);" />
           </button>
@@ -298,8 +296,7 @@
       <div class="divider-space"></div>
       <div class="container pt-lg-5 pb-5">
         <div class="d-desktop">
-
-          <table class="table text-center table-tight th-dark">
+          <table class="table text-center th-dark">
             <thead>
               <tr>
                 <th scope="col">隊伍</th>
@@ -364,7 +361,7 @@
           </table>
         </div>
         <div class="d-mobile">
-          <table class="table text-center table-tight th-dark">
+          <table class="table text-center th-dark">
             <thead>
               <tr>
                 <th scope="col" class="text-left px-4">隊伍</th>
@@ -406,10 +403,8 @@
               </tr>
             </tbody>
           </table>
-
           <div class="divider-space-1"></div>
-
-          <table class="table text-center table-tight th-dark">
+          <table class="table text-center th-dark">
             <thead>
               <tr>
                 <th scope="col" class="text-left px-4">隊伍</th>
@@ -452,9 +447,7 @@
             </tbody>
           </table>
         </div>
-
       </div>
-
     </div>
 
     <div id="lead-tracker-wrapper">
@@ -463,15 +456,36 @@
           <h6 class="mb-0 text-center">賽事追蹤</h6>
         </div>
         <div class="w-100">
-          <div class="d-desktop">
-            <img class="img-fluid w-100" src="images/demo/desktop-1.png" />
-          </div>
-          <div class="d-mobile ">
-            <img class="img-fluid w-100" src="images/demo/mobile-1.png" />
-          </div>
+          <canvas id="event-tracking"></canvas>
         </div>
 
-        <div class="divider-space"></div>
+        <div id="event-tracking-part">
+          <div class="left">
+            <img src="images/demo/team-logo-5.png">
+          </div>
+          <div class="mid">
+            <div class="win">
+              <h6>最多領先(分數)</h6>
+              <p>
+                <span style="color:blueviolet">13</span>
+                /
+                <span style="color: #f3cd05;">7</span>
+              </p>
+            </div>
+            <div class="tie">
+              <h6>平手次數</h6>
+              <p>3</p>
+            </div>
+            <div class="change">
+              <h6>領先更換次數</h6>
+              <p>7</p>
+            </div>
+          </div>
+          <div class="right">
+            <img src="images/demo/team-logo-4.png">
+          </div>
+
+        </div>
 
         <div class="row">
           <div class="col-12 col-lg-6 mb-4">
@@ -479,11 +493,23 @@
               <h6 class="mb-0 text-center">隊伍數據</h6>
             </div>
             <div class="w-100">
-              <div class="d-desktop">
-                <img class="img-fluid w-100" src="images/demo/desktop-2.png" />
-              </div>
-              <div class="d-mobile ">
-                <img class="img-fluid w-100" src="images/demo/mobile-2.png" />
+              <div class="bg-white p-2">
+                <div class="row py-2">
+                  <div class="col-auto">
+                    <img class="team-icon ml-2" src="images/demo/team-logo-1.png">
+                    <span class="h6">&nbsp;&nbsp;基隆商工</span>
+                  </div>
+                  <div class="col"></div>
+
+                  <div class="col-auto">
+                    <span class="h6">和平高中&nbsp;&nbsp;</span>
+                    <img class="team-icon mr-2" src="images/demo/team-logo-5.png">
+                  </div>
+                </div>
+                <div id="team-data">
+                  <canvas id="team_A"></canvas>
+                  <canvas id="team_B"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -493,7 +519,7 @@
             </div>
             <div class="bg-white p-2">
 
-              <div class="row border-bottom py-2">
+              <div class="row py-2">
                 <div class="col-auto">
                   <img class="team-icon ml-2" src="images/demo/team-logo-1.png" />
                   <span class="h6">&nbsp;&nbsp;基隆商工</span>
@@ -586,6 +612,8 @@
 
   </div>
 
+
+  <!--BOXSCORE & PLAYBYPLAY-->
   <div class="bg-midgrey py-3">
     <div class="container">
       <div id="pill-wrapper">
@@ -1212,8 +1240,6 @@
     </div>
 
   </div>
-
-
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -1290,10 +1316,14 @@
   </footer>
 </body>
 <!-- init -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script src="js/layout.js"></script>
+<script src="js/chart.js"></script>
+
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/play-by-play.js"></script>
 <script type="text/javascript" src="lib/js/slick.min.js"></script>
+
 <script>
   $(function () {
     $("#boxscore-statistic-root").kendoGrid({

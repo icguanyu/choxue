@@ -1,0 +1,147 @@
+/*原本的*/
+#top-region-wrapper {
+  position: relative;
+}
+#top-region-wrapper .detail-statistic {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 992px) {
+  #top-region-wrapper .detail-statistic {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 100px;
+    padding-left: 15px;
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+  }
+}
+
+.bg-midgrey {
+  background-color: #e3e3e3;
+}
+
+.nav-pills .nav-link {
+  color: #9d9d9d;
+  background-color: white;
+  border-radius: 0;
+  border-bottom: 5px solid #d3d3d3;
+}
+.nav-pills .nav-link.active {
+  color: #e94f1b;
+  background-color: white;
+  border-color: #e94f1b;
+}
+/*原本的*/
+#event-tracking {
+  height: 320px;
+  padding: 10px;
+  background: white;
+}
+#event-tracking-part {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  background: white;
+  justify-content: space-between;
+  .left,
+  .right {
+    position: relative;
+    flex: 1;
+    padding: 30px 0; 
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 300px;
+      height: 6px;
+      bottom: 0;
+    }
+  }
+  .left {
+    text-align: right;
+    &:after{
+      left: 0;
+      background: blueviolet;
+    }
+  }
+  .right {
+    text-align: left; 
+    &:after{
+      right: 0;
+      background: #f3cd05;
+    }
+  }
+  .mid {
+    flex: 3;
+    display: flex;
+    padding: 0 20px;
+    text-align: center;
+    & > div {
+      flex: 1;
+      padding: 20px 0;
+      p {
+        font-weight: 600;
+        font-size: 2rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+#team-data {
+  width: 50% !important;
+  height: 350px;
+  display: flex;
+}
+#team-data canvas {
+  background: white;
+}
+
+@media (max-width: 992px) {
+  #event-tracking-part {
+    flex-wrap: wrap;
+    .left,
+    .right {
+      padding: 10px 15px;
+    }
+    .left ,
+    .right {
+      text-align: center;
+    }
+    .mid {
+      position: relative;
+      width: 100%;
+      flex: initial;
+      padding: 15px;
+      order: 1;
+      & > div {
+        padding: 0px;
+        p {
+          font-weight: 600;
+          font-size: 2rem;
+          margin: 0 auto;
+        }
+      }
+      &:before{
+        content: 'VS';
+        font-size: 2rem;
+        font-weight: bold;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  #team-data {
+    width: 50% !important;
+    height: 350px;
+    display: flex;
+  }
+}
