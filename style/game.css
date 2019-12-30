@@ -78,7 +78,7 @@
 #event-tracking-part .left:after,
 #event-tracking-part .right:after {
   position: absolute;
-  content: '';
+  content: "";
   width: 300px;
   height: 6px;
   bottom: 0;
@@ -171,7 +171,7 @@
     margin: 0 auto;
   }
   #event-tracking-part .mid:before {
-    content: 'VS';
+    content: "VS";
     font-size: 2rem;
     font-weight: bold;
     position: absolute;

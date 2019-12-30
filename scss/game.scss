@@ -33,6 +33,7 @@
   background-color: white;
   border-color: #e94f1b;
 }
+
 /*原本的*/
 #event-tracking {
   height: 320px;
@@ -50,14 +51,14 @@
   .right {
     position: relative;
     flex: 1;
-    padding: 30px 0; 
+    padding: 30px 0;
     img {
       width: 60px;
       height: 60px;
     }
-    &:after{
+    &:after {
       position: absolute;
-      content: '';
+      content: "";
       width: 300px;
       height: 6px;
       bottom: 0;
@@ -65,14 +66,14 @@
   }
   .left {
     text-align: right;
-    &:after{
+    &:after {
       left: 0;
       background: blueviolet;
     }
   }
   .right {
-    text-align: left; 
-    &:after{
+    text-align: left;
+    &:after {
       right: 0;
       background: #f3cd05;
     }
@@ -110,7 +111,7 @@
     .right {
       padding: 10px 15px;
     }
-    .left ,
+    .left,
     .right {
       text-align: center;
     }
@@ -128,8 +129,8 @@
           margin: 0 auto;
         }
       }
-      &:before{
-        content: 'VS';
+      &:before {
+        content: "VS";
         font-size: 2rem;
         font-weight: bold;
         position: absolute;
