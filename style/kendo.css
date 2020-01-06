@@ -1,13 +1,17 @@
 .k-grid * {
   text-align: center;
   font-size: 12px;
-  font-family: unset; }
+  /* font-family: unset;  */
+}
 
 .k-grid .k-grid-header {
-  background: #000000 !important; }
+  background: #000000 !important; 
+}
   .k-grid .k-grid-header th {
-    border-width: 0px 1px 1px 0px !important;
-    border-color: white !important; }
+    border: none;
+    /* border-width: 0px 1px 1px 0px !important;
+    border-color: white !important;  */
+  }
 
 .k-grid th {
   background: #000000 !important;
@@ -18,7 +22,11 @@
     padding-right: 0 !important;
     white-space: normal; }
   .k-grid th[data-colspan]:not([data-colspan="1"]) {
-    background-color: #e94f1b !important; }
+    background-color: #e94f1b !important; 
+    border-color: rgba(255,255,255,0.5);
+    border-style: solid;
+    border-width: 0px 0px 0px 1px ;
+  }
 
 .k-grid tr {
   background: #fafafa; }
@@ -30,4 +38,5 @@
 
 .k-widget {
   font-size: 12px;
-  font-family: unset; }
+  font-family: unset; 
+  border:none;}

@@ -1,0 +1,179 @@
+@import "_variables.scss";
+
+#search-wrapper {
+  background-color: #2e2e2e;
+}
+#search-wrapper .calendar-btn {
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  border-radius: 0;
+  background-color: #404040;
+  border: 0;
+}
+#search-wrapper .calendar-btn#input {
+  color: white;
+}
+#search-wrapper .calendar-btn#calendar {
+  color: #e94f1b;
+}
+#search-wrapper .calendar-btn#calendar i.calendar:after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: transparent url("../images/svg/calendar-icon.svg") no-repeat 0px 0px;
+  background-size: cover;
+}
+
+table * {
+  font-weight: 500 !important;
+}
+
+table .date {
+  vertical-align: top !important;
+}
+
+table th[colspan]:not([colspan="1"]) {
+  background-color: black !important;
+}
+
+table .future {
+  color: #d3d3d3 !important;
+}
+/*以上為前人內容*/
+
+[v-clock] {
+  display: none;
+}
+
+.wrap {
+  margin-top: 5px;
+  position: relative;
+  .head {
+    font-size: 1.2rem;
+    padding: 10px;
+    background: #2e2e2e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    .backToday {
+      cursor: pointer;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 20px;
+      position: absolute;
+      right: 10px;
+    }
+  }
+
+  .weekday {
+    display: flex;
+    justify-content: space-between;
+    background: #404040;
+    div {
+      flex: 1 1 0%;
+      padding: 5px 10px;
+      border-left: 1px solid #777;
+      color: white;
+    }
+    div:first-child {
+      border: none;
+    }
+  }
+  .week {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    .day {
+      position: relative;
+      padding: 5px;
+      flex: 1;
+      border-right: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before {
+        font-size: 14px;
+        content: attr(data-date);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+      }
+      .content {
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: flex-end;
+        .number {
+          font-size: 2rem;
+          line-height: 2rem;
+          font-weight: bold;
+        }
+        span{
+          font-size: 12px;
+        }
+      }
+    }
+    .today {
+      background: $primary;
+      color: white;
+      .content {
+        color: white;
+        border: none;
+      }
+    }
+    .other {
+      background: #f0f0f0;
+      color: #aaa;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .wrap {
+    .head {
+      font-size: 1rem;
+      .backToday {
+        padding: 2px 10px;
+      }
+    }
+    .weekday {
+      div {
+        padding: 3px 10px;
+      }
+    }
+    .week {
+      height: 60px;
+      .day {
+        &:before {
+          font-size: 12px;
+          padding: 3px;
+        }
+        .content {
+          border-radius: 5px;
+          margin-top: 15px;
+          align-items: center;
+          border: none;
+          padding: 5px;
+          flex-wrap: wrap;
+          letter-spacing: 0px;
+          .number{
+            font-size: 20px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

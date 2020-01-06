@@ -16,13 +16,6 @@
   <script type="text/javascript" src="lib/js/popper-1.2.9.min.js"></script>
   <script type="text/javascript" src="lib/js/bootstrap-4.1.0.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="lib/css/kendo.bootstrap-v4.css" />
-  <link rel="stylesheet" type="text/css" href="lib/css/kendo.mobile.all.css" />
-  <link rel="stylesheet" type="text/css" href="lib/css/kendo.custom.css" />
-  <script type="text/javascript" src="lib/js/kendo.all.min.js"></script>
-  <script type="text/javascript" src="lib/js/kendo.timezones.min.js"></script>
-  <script type="text/javascript" src="lib/js/kendo.mobile.min.js"></script>
-
   <link rel="stylesheet" href="style/layout.css">
 </head>
 
@@ -169,22 +162,55 @@
               </div>
             </div>
           </button>
-          <div id="scheduler-container" style="display: none;">
-            <div id="scheduler"></div>
-          </div>
+
+
         </div>
 
         <div class="col-auto">
           <button class="btn calendar-btn" id="calendar">
-            &nbsp;<i class="calendar"></i>&nbsp;
+            <i class="calendar"></i>
           </button>
         </div>
       </div>
     </div>
   </div>
+  <!-- calender-->
+  <div class="bg-grey">
+    <div class="container" id="scheduler-container">
+      <div id="app" v-clock style="display: none;">
+        <div class="wrap">
+          <div class="head">
+            <i class="fas fa-chevron-left" @click="adjustMonth(-1)"></i>
+            <div class="nowMonth">{{calendar.year}} 年 {{calendar.month + 1}} 月
+            </div>
+            <i class="fas fa-chevron-right" @click="adjustMonth(1)"></i>
+            <div class="backToday" @click="setToday">回今日</div>
+          </div>
+          <div class="weekday">
+            <div>日</div>
+            <div>一</div>
+            <div>二</div>
+            <div>三</div>
+            <div>四</div>
+            <div>五</div>
+            <div>六</div>
+          </div>
+          <div class="week" v-for="i in 6">
+            <div class="day" v-for="j in 7" :data-date="calendarMonth[(i-1)*7+j-1].date"
+              :class="{today:calendarMonth[(i-1)*7+j-1].year === today.year && calendarMonth[(i-1)*7+j-1].month === today.month && calendarMonth[(i-1)*7+j-1].date === today.date, other:calendarMonth[(i-1)*7+j-1].month !== calendar.month}">
+              <div class="content" v-if="calendarMonth[(i-1)*7+j-1].data">
+                <div class="number">{{calendarMonth[(i-1)*7+j-1].data}}</div><span>GAMES</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Container -->
   <div class="bg-grey">
-    <div class="container py-3 pt-lg-5 pb-lg-0">
+    <div class="container py-3 pb-lg-0">
       <div class="row">
         <div class="col-12 col-lg-auto mb-3">
           <div class="dropdown">
@@ -835,139 +861,123 @@
   </footer>
 </body>
 <!-- init -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
 <script src="js/layout.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
 <script>
-  $("#datepicker").kendoDatePicker();
+  (function () {
+    $('#calendar').click(function () {
+      $('#app').slideToggle()
+    })
 
-  $("#scheduler").kendoScheduler({
-    date: new Date("2013/6/13"),
-    startTime: new Date("2013/6/13 07:00 AM"),
-    height: 600,
-    views: [
-      "month"
-    ],
-    dataSource: {
-      batch: true,
-      transport: {
-        read: {
-          url: "https://demos.telerik.com/kendo-ui/service/tasks",
-          dataType: "jsonp"
-        },
-        update: {
-          url: "https://demos.telerik.com/kendo-ui/service/tasks/update",
-          dataType: "jsonp"
-        },
-        create: {
-          url: "https://demos.telerik.com/kendo-ui/service/tasks/create",
-          dataType: "jsonp"
-        },
-        destroy: {
-          url: "https://demos.telerik.com/kendo-ui/service/tasks/destroy",
-          dataType: "jsonp"
-        },
-        parameterMap: function (options, operation) {
-          if (operation !== "read" && options.models) {
-            return {
-              models: kendo.stringify(options.models)
-            };
-          }
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          today: {
+            year: 0,
+            month: 0,
+            date: 0,
+            day: 0
+          },
+          calendar: {
+            year: 0,
+            month: 0,
+            date: 0,
+            day: 0
+          },
+          // 賽程資料
+          gamesData: [
+            {
+              date: '2019/12/29',
+              games: 5
+            }, {
+              date: '2020/01/07',
+              games: 5
+            }, {
+              date: '2020/01/18',
+              games: 8
+            }, {
+              date: '2020/01/31',
+              games: 3
+            }, {
+              date: '2020/02/10',
+              games: 3
+            }, {
+              date: '2020/02/19',
+              games: 3
+            }, {
+              id: 1,
+              date: '2020/03/05',
+              games: 3
+            },
+          ]
         }
       },
-      schema: {
-        model: {
-          id: "taskId",
-          fields: {
-            taskId: {
-              from: "TaskID",
-              type: "number"
-            },
-            title: {
-              from: "Title",
-              defaultValue: "No title",
-              validation: {
-                required: true
+      mounted() {
+        this.setToday()
+      },
+      methods: {
+        setToday() {
+          const date = new Date()
+          this.today.year = this.calendar.year = date.getFullYear()
+          this.today.month = this.calendar.month = date.getMonth() // 0~11
+          this.today.date = this.calendar.date = date.getDate()
+          this.today.day = this.calendar.day = date.getDay()
+        },
+        adjustYear(fix) {
+          this.calendar.year += fix
+        },
+        adjustMonth(fix) {
+          let month = this.calendar.month + fix
+          if (month > 11) {
+            this.adjustYear(1)
+            this.calendar.month = 0
+          } else if (month < 0) {
+            this.adjustYear(-1)
+            this.calendar.month = 11
+          } else {
+            this.calendar.month = month
+          }
+
+        }
+      },
+      computed: {
+        calendarFirstDay() {
+          const mDate = new Date(this.calendar.year, this.calendar.month, 1)
+          const date = new Date(this.calendar.year, this.calendar.month, 1 - mDate.getDay())
+          return {
+            year: date.getFullYear(),
+            month: date.getMonth(),
+            date: date.getDate(),
+            day: date.getDay(),
+          }
+        },
+        calendarMonth() {
+          var data = []
+          let date, game
+          for (let i = 0; i < 42; i++) {
+            date = new Date(this.calendarFirstDay.year, this.calendarFirstDay.month, this.calendarFirstDay.date + i)
+            data.push({
+              year: date.getFullYear(),
+              month: date.getMonth(),
+              date: date.getDate(),
+              day: date.getDay(),
+              data: '',
+            })
+            this.gamesData.forEach(function (g) {
+              if (new Date(g.date).getTime() === date.getTime()) {
+                data[i].data = g.games
               }
-            },
-            start: {
-              type: "date",
-              from: "Start"
-            },
-            end: {
-              type: "date",
-              from: "End"
-            },
-            startTimezone: {
-              from: "StartTimezone"
-            },
-            endTimezone: {
-              from: "EndTimezone"
-            },
-            description: {
-              from: "Description"
-            },
-            recurrenceId: {
-              from: "RecurrenceID"
-            },
-            recurrenceRule: {
-              from: "RecurrenceRule"
-            },
-            recurrenceException: {
-              from: "RecurrenceException"
-            },
-            ownerId: {
-              from: "OwnerID",
-              defaultValue: 1
-            },
-            isAllDay: {
-              type: "boolean",
-              from: "IsAllDay"
-            }
+            })
           }
+          return data
         }
       },
-      filter: {
-        logic: "or",
-        filters: [{
-          field: "ownerId",
-          operator: "eq",
-          value: 1
-        },
-        {
-          field: "ownerId",
-          operator: "eq",
-          value: 2
-        }
-        ]
-      }
-    },
-    resources: [{
-      field: "ownerId",
-      title: "Owner",
-      dataSource: [{
-        text: "Alex",
-        value: 1,
-        color: "#f8a398"
-      },
-      {
-        text: "Bob",
-        value: 2,
-        color: "#51a0ed"
-      },
-      {
-        text: "Charlie",
-        value: 3,
-        color: "#56ca85"
-      }
-      ]
-    }]
-  });
-
-  $('.calendar-btn').click(function () {
-    $('#scheduler-container').toggle();
-  });
-
-
+    })
+  })()
 </script>
 
 </html>
