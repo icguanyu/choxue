@@ -220,3 +220,20 @@ table .future {
     line-height: 18px;
   }
 }
+
+@media (max-width: 480px) {
+  .wrap .week .day {
+    padding: 0;
+  }
+  .wrap .week .day .content {
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .wrap .week .day .content .number {
+    font-size: 16px;
+  }
+}

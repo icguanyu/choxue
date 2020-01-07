@@ -177,3 +177,20 @@ table .future {
     }
   }
 }
+@media (max-width: 480px) {
+  .wrap {
+    .week {
+      .day {
+        padding: 0;
+        .content {
+          padding: 0;
+          justify-content: center;
+          transform: scale(0.8);
+          .number{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
