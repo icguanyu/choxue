@@ -18,7 +18,7 @@
     $hamburger.removeClass('active')
     $mobile_menu.removeClass('active')
     $('html, body').css({
-      overflow: 'auto',
+      overflow: 'initial',
       height: 'auto'
     });
   }
