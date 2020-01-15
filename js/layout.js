@@ -9,14 +9,21 @@
     e.stopPropagation()
     $hamburger.toggleClass('active')
     $mobile_menu.toggleClass('active')
+    $hamburger.hasClass('active') ? hideScrollBar() : resetScrollBar()
+
+  }
+  function hideMobileMenu(e) {
+    $hamburger.removeClass('active')
+    $mobile_menu.removeClass('active')
+    resetScrollBar()
+  }
+  function hideScrollBar() {
     $('html, body').css({
       overflow: 'hidden',
       height: '100%'
     });
   }
-  function hideMobileMenu(e) {
-    $hamburger.removeClass('active')
-    $mobile_menu.removeClass('active')
+  function resetScrollBar() {
     $('html, body').css({
       overflow: 'initial',
       height: 'auto'
